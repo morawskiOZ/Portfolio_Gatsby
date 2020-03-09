@@ -22,7 +22,7 @@ commands:
           command: sudo npm install -g --silent netlify-cli
       - run:
           name: build
-          command: gatsby build
+          command: npm run build
 jobs:
   build:
     executor: node-executor
