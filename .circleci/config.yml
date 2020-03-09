@@ -27,7 +27,7 @@ commands:
           key: gatsby-public-cache-{{ .Branch }}
           paths:
             - ./public
-      - install_netifly:
+      - run:
           name: Install Netlify-cli
           command: sudo npm install -g --silent netlify-cli
 workflows:
