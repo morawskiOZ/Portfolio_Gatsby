@@ -23,7 +23,7 @@ commands:
       - run:
           name: build
           command: npm run build
-  tests:
+  test:
     steps:
       - run:
           name: tests
@@ -34,6 +34,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - gatsby-build
+      - test
       - run:
           name: Netlify Deploy
           command: netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=public
@@ -41,6 +42,7 @@ jobs:
     executor: node-executor
     steps:
       - gatsby-build
+      - test
       - run:
           name: Netlify Deploy
           command: netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public
