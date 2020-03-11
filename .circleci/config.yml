@@ -23,6 +23,11 @@ commands:
       - run:
           name: build
           command: npm run build
+  tests:
+    steps:
+      - run:
+        name: tests
+        command: npm run test
 jobs:
   build:
     executor: node-executor

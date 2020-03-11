@@ -1,3 +1,9 @@
 import React from "react"
+import { Header } from "../components/Header"
 
-export default () => <div>Hello world with Circle CI third try!</div>
+export default () => (
+	<>
+		<Header />
+		<div>Hello world with Circle CI third try!</div>
+	</>
+)
