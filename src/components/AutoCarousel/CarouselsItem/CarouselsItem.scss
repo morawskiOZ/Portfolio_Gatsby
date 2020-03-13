@@ -1,0 +1,73 @@
+@import "../../../components/App/variables";
+
+.item {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
+}
+.carouselItem-container{
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 100%;
+  position: relative;
+  padding: 100px 0 100px 0;
+  // grid-column: 2;
+
+}
+@media screen and (max-width: 1200px) {
+  .carouselItem-container{
+    width: 440px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .carouselItem-container{
+    padding: 50px 0 50px 0;
+  }
+}
+@media screen and (max-width: 500px) {  
+  .carouselItem-container{
+    width: 270px;
+  }
+}
+
+.level-2 {
+  height: var(--level2-height);
+  width: var(--level2-width);
+  line-height: var(--level2-height);
+  left: var(--level-2-left);
+  margin-top: var(--margin-top-level2);
+}
+
+.level-1 {
+  height: var(--level1-height);
+  width: var(--level1-width);
+  line-height: var(--level1-height);
+  left: var(--level-1-left);
+  margin-top: var(--margin-top-level1);
+}
+
+.level0 {
+  height: var(--level0-height);
+  width: var(--level0-width);
+  line-height: var(--level0-height);
+  left: var(--level0-left);
+}
+
+.level1 {
+  height: var(--level1-height);
+  width: var(--level1-width);
+  line-height: var(--level1-height);
+  margin-top: var(--margin-top-level1);
+  left: var(--level1-left);
+}
+
+.level2 {
+  height: var(--level2-height);
+  width: var(--level2-width);
+  line-height: var(--level2-height);
+  margin-top: var(--margin-top-level2);
+  left: var(--level2-left);
+}

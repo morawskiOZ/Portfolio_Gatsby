@@ -1,0 +1,13 @@
+.ProjectsSection {
+  &-container {
+    position: relative;
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-bottom: 90px;
+  }
+  &-title {
+    position: absolute;
+    right: 35px;
+    top: -1px;
+  }
+}

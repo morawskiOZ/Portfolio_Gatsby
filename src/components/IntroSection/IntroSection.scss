@@ -1,0 +1,23 @@
+.IntroSection {
+  &-container {
+    position: relative;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+  }
+  &-title {
+    position: absolute;
+    right: 35px;
+    top: -1px;
+  }
+}
+
+@media screen and (max-width: 1000px) {  
+  .IntroSection {
+    grid-template-columns: 40px 1fr 40px;
+    &-container {
+      margin-bottom: 50px;
+    }
+  }
+}

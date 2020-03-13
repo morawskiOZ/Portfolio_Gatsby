@@ -1,0 +1,45 @@
+.downArrow {
+  position: absolute;
+  left: calc(50% + 5px);
+  bottom: 100px;
+  &--flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  i {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 40px;
+    position: absolute;
+  }
+
+  &--animated {
+    animation: scaleUp 1.5s infinite cubic-bezier(0.4, 0, 1, 1);
+  }
+  &--bottom {
+    bottom: -72px;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(1) rotate(45deg) skew(-20deg, -20deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(45deg) skew(-20deg, -20deg);
+  }
+  100% {
+    transform: scale(1) rotate(45deg) skew(-20deg, -20deg);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .downArrow {
+    left: 51%;
+    i {
+      border-width: 0 3px 3px 0;
+      padding: 30px;
+    }
+  }
+}

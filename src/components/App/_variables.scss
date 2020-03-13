@@ -1,0 +1,87 @@
+// import @import @import "../../components/App/variables";
+// Colours
+$main-background-colour-green: #89fad0;
+$secondary-colour-blue: #4ec9e1;
+$secondary-colour-violet: #6796e5;
+$secondary-colour-green: #228291;
+
+// Sizes
+:root {
+  --level2-height: 150px;
+  --level2-width: 110px;
+  --level1-height: 180px;
+  --level1-width: 130px;
+  --level0-height: 200px;
+  --level0-width: 150px;
+
+  --level-2-left: 635px;
+  --level-1-left: 475px;
+  --level0-left: 305px;
+  --level1-left: 155px;
+  --level2-left: 25px;
+  --margin-top-level2: 25px;
+  --margin-top-level1: 10px;
+  --margin-top-animation: 40px;
+  --margin-top-animation-active: 25px;
+
+  --infoCardPhotoSize: 7rem;
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    --level2-height: calc(75px/1.6);
+    --level2-width: calc(110px/1.6);
+    --level1-height: calc(180px/1.6);
+    --level1-width: calc(130px/1.6);
+    --level0-height: calc(200px/1.6);
+    --level0-width: calc(150px/1.6);
+
+    --level-2-left: calc(635px/1.6);
+    --level-1-left: calc(475px/1.6);
+    --level0-left: calc(305px/1.6);
+    --level1-left: calc(155px/1.6);
+    --level2-left: calc(25px/1.6);
+    --margin-top-level2: 15px;
+    --margin-top-level1: 5px;
+    --margin-top-animation: 20px;
+    --margin-top-animation-active: 15px;
+  }
+}
+@media screen and (max-width: 800px) {  
+  :root {
+    --level2-height: calc(75px/2);
+    --level2-width: calc(110px/2);
+    --level1-height: calc(180px/2);
+    --level1-width: calc(130px/2);
+    --level0-height: calc(200px/2);
+    --level0-width: calc(150px/2);
+    --level-2-left: calc(635px/2);
+    --level-1-left: calc(475px/2);
+    --level0-left: calc(305px/2);
+    --level1-left: calc(155px/2);
+    --level2-left: calc(25px/2);
+    --margin-top-level2: 10px;
+    --margin-top-level1: 5px;
+    --margin-top-animation: 15px;
+    --margin-top-animation-active: 10px;
+  }
+}
+@media screen and (max-width: 500px) {  
+  :root {
+    --level2-height: calc(75px/3);
+    --level2-width: calc(110px/3);
+    --level1-height: calc(180px/3);
+    --level1-width: calc(130px/3);
+    --level0-height: calc(200px/3);
+    --level0-width: calc(150px/3);
+    --level-2-left: calc(635px/3);
+    --level-1-left: calc(475px/3);
+    --level0-left: calc(305px/3);
+    --level1-left: calc(155px/3);
+    --level2-left: calc(25px/3);
+    --margin-top-level2: 10px;
+    --margin-top-level1: 5px;
+    --margin-top-animation: 15px;
+    --margin-top-animation-active: 10px;
+  }
+}

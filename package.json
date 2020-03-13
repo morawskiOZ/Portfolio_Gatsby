@@ -1,39 +1,68 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "jest"
-  },
-  "dependencies": {
-    "gatsby": "^2.19.7",
-    "gatsby-plugin-typescript": "^2.2.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.8.3",
-    "@types/jest": "^25.1.4",
-    "babel-jest": "^25.1.0",
-    "babel-preset-gatsby": "^0.2.34",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.1.0",
-    "prettier": "^1.19.1",
-    "react-test-renderer": "^16.13.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+	"name": "gatsby-starter-hello-world",
+	"private": true,
+	"description": "A simplified bare-bones starter for Gatsby",
+	"version": "0.1.0",
+	"license": "MIT",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
+		"lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+		"lint-fix": "eslint --fix --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+		"start": "npm run develop",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"test": "jest"
+	},
+	"dependencies": {
+		"@rehooks/window-scroll-position": "^1.0.1",
+		"axios": "^0.19.2",
+		"gatsby": "^2.19.7",
+		"gatsby-plugin-react-svg": "^3.0.0",
+		"gatsby-plugin-sass": "^2.1.30",
+		"gatsby-plugin-typescript": "^2.2.2",
+		"node-sass": "^4.13.1",
+		"react": "^16.12.0",
+		"react-anchor-link-smooth-scroll": "^1.0.12",
+		"react-dom": "^16.12.0",
+		"react-scripts": "^3.4.0",
+		"react-sticky-el": "^1.1.0",
+		"react-transition-group": "^4.3.0",
+		"typed.js": "^2.0.11"
+	},
+	"devDependencies": {
+		"@babel/preset-typescript": "^7.8.3",
+		"@types/jest": "^25.1.4",
+		"@types/react-addons-css-transition-group": "^15.0.5",
+		"@types/react-transition-group": "^4.2.4",
+		"@typescript-eslint/eslint-plugin": "^2.23.0",
+		"@typescript-eslint/parser": "^2.23.0",
+		"babel-jest": "^25.1.0",
+		"babel-preset-gatsby": "^0.2.34",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb-typescript": "^7.0.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-import-resolver-alias": "^1.1.2",
+		"eslint-loader": "^3.0.3",
+		"eslint-plugin-import": "^2.20.1",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.2",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-react-hooks": "^1.7.0",
+		"gatsby-plugin-eslint": "^2.0.8",
+		"gatsby-plugin-root-import": "^2.0.5",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^25.1.0",
+		"prettier": "^1.19.1",
+		"react-test-renderer": "^16.13.0",
+		"typescript": "^3.8.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+	},
+	"bugs": {
+		"url": "https://github.com/gatsbyjs/gatsby/issues"
+	}
 }

@@ -1,9 +1,9 @@
-import React from "react"
-import { Header } from "../components/Header"
+import React from 'react'
+import App from 'src/components/App/App'
 
 export default () => (
 	<>
-		<Header />
-		<div>Hello world with Circle CI third try!</div>
+		<App />
+		<div>Hello world with Circle CI forth try!</div>
 	</>
 )

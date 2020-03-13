@@ -1,0 +1,17 @@
+.InfoCardLink {
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  &-Svg {
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

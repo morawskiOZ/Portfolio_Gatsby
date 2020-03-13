@@ -1,0 +1,63 @@
+.TimeLine {
+  &-firstLine {
+    height: 40px;
+    width: 10px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+  }
+  &-secondLine {
+    background: #000;
+    position: absolute;
+    height: 10px;
+    width: 48%;
+    top: 40px;
+    right: 7px;
+  }
+  &-firstDot {
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 30px;
+    height: 26px;
+    width: 26px;
+    background-color: #000;
+    border-radius: 50%;
+    &--inner {
+      height: 12px;
+      width: 12px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 3;
+      left: 7px;
+      top: 7px;
+    }
+  }
+  &-secondDot {
+    position: absolute;
+    top: 33px;
+    height: 26px;
+    width: 26px;
+    background-color: #000;
+    border-radius: 50%;
+    right: 5px;
+    &--inner {
+      height: 12px;
+      width: 12px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 3;
+      left: 7px;
+      top: 7px;
+    }
+  }
+  &-thirdLine {
+    height: 100%;
+    width: 10px;
+    background: #000;
+    position: absolute;
+    right: 12px;
+    margin-top: 40px;
+  }
+}
