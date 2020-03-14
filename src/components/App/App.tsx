@@ -24,15 +24,17 @@ const App = (): ReactElement => {
 				<Menu />
 			</Sticky>
 			<MainParallax parallaxImage={parallax}>
-				<ParallaxTitle />
-				<DownArrows href='#Intro' />
+				<>
+					<ParallaxTitle />
+					<DownArrows href='#Intro' />
+				</>
 			</MainParallax>
 			<div className='appFrame-timeLineZone'>
 				<div className='TimeLine-thirdLine' />
 				<IntroSection id='Intro'>
 					<AutoCarousel
 						items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
-						autoRotate={false}
+						autoRotate
 					/>
 					<IntroText />
 				</IntroSection>

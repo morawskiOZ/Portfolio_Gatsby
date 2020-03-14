@@ -79,9 +79,17 @@
 		"react/prop-types": 0,
 		"@typescript-eslint/no-var-requires": 0,
 		"@typescript-eslint/no-non-null-assertion": 0,
-		"jsx-a11y/label-has-associated-control": [ 2, {
-			"assert": "both",
-			"depth": 3
-		  }]
+		"jsx-a11y/label-has-associated-control": [
+			2,
+			{
+				"assert": "both",
+				"depth": 3
+			}
+		],
+		"no-plusplus": [
+			2,
+			{ "allowForLoopAfterthoughts": true
+			}
+		]
 	}
 }

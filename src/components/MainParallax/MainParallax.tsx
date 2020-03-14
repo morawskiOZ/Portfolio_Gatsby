@@ -14,13 +14,11 @@ const MainParallax = ({
 		backgroundImage: `url(${parallaxImage})`,
 	}
 	return (
-		<>
-			<div className='mainParallax-container'>
-				<div className='mainParallax-image' style={inlineStyles}>
-					{children}
-				</div>
+		<div className='mainParallax-container'>
+			<div className='mainParallax-image' style={inlineStyles}>
+				{children}
 			</div>
-		</>
+		</div>
 	)
 }
 

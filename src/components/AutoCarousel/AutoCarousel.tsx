@@ -22,7 +22,7 @@ const AutoCarousel = ({
 	const generateItems = (itemsArray): ReactElement[] => {
 		const carouselItems = []
 		let level
-		for (let i = activeElementIndex - 2; i < activeElementIndex + 3; i + 1) {
+		for (let i = activeElementIndex - 2; i < activeElementIndex + 3; i++) {
 			let index = i
 			if (i < 0) {
 				index = itemsArray.length + i
@@ -33,7 +33,7 @@ const AutoCarousel = ({
 			carouselItems.push(
 				<CarouselsItem
 					key={index}
-					id={index}
+					id={String(index)}
 					level={level}
 					component={itemsArray[index]}
 				/>
