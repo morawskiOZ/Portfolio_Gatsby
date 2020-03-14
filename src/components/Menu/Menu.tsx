@@ -19,10 +19,7 @@ const Menu = (): ReactElement => {
 		1,
 	]
 
-	const options = {
-		throttle: 100,
-	}
-	const position = useWindowScrollPosition(options)
+	const position = { x: 0, y: 0 }
 
 	useEffect(() => {
 		if (position.y === 0) {
