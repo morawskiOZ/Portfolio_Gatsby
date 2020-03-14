@@ -1,4 +1,3 @@
-import useWindowScrollPosition from '@rehooks/window-scroll-position'
 import React, { ReactElement, useEffect, useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './Menu.scss'
