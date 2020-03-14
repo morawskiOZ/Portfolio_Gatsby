@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './DownArrows.scss'
 
-const DownArrows = ({ href }) => {
+const DownArrows = ({ href }): ReactElement => {
 	return (
 		<AnchorLink href={href} offset='100'>
 			<div className='downArrow arrows downArrow--flex'>

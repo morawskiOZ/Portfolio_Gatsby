@@ -8,8 +8,8 @@ import './foundation-icon/foundation-icons.scss'
 // TODO add stop and go func on click, show diffrent coursor
 // add pagination, kropki ktore pokazuja aktywny projekt i maja tez setery ustawiajace a
 interface AutoCarouselProps {
-	items: any
-	autoRotate?: boolean
+	items: ReactElement[]
+	autoRotate: boolean
 }
 
 const AutoCarousel = ({
@@ -19,10 +19,10 @@ const AutoCarousel = ({
 	const [activeElementIndex, setActiveElementIndex] = useState<number>(5)
 	const [direction, setDirection] = useState<string>('')
 
-	const generateItems = (itemsArray): any[] => {
+	const generateItems = (itemsArray): ReactElement[] => {
 		const carouselItems = []
 		let level
-		for (let i = activeElementIndex - 2; i < activeElementIndex + 3; i++) {
+		for (let i = activeElementIndex - 2; i < activeElementIndex + 3; i + 1) {
 			let index = i
 			if (i < 0) {
 				index = itemsArray.length + i
@@ -47,7 +47,7 @@ const AutoCarousel = ({
 	//   [`move${name}`]()
 	// }
 
-	const moveLeft = (itemsArray: any) => {
+	const moveLeft = (itemsArray: ReactElement[]): void => {
 		setActiveElementIndex(prevActiveElementIndex =>
 			prevActiveElementIndex - 1 < 0
 				? itemsArray.length - 1
@@ -65,7 +65,7 @@ const AutoCarousel = ({
 	//   setDirection("right")
 	// }, 1000)
 
-	const moveRight = (itemsArray: any): void => {
+	const moveRight = (itemsArray: ReactElement[]): void => {
 		setActiveElementIndex(
 			prevActiveElementIndex => (prevActiveElementIndex + 1) % itemsArray.length
 		)
@@ -89,8 +89,14 @@ const AutoCarousel = ({
 	return (
 		<div>
 			<div id='carousel' className='autoCarousel noselect'>
-				{autoRotate! && (
-					<div className='arrow arrow-left' onClick={() => moveLeft(items)}>
+				{!autoRotate && (
+					<div
+						className='arrow arrow-left'
+						onClick={(): void => moveLeft(items)}
+						onKeyDown={(): void => moveLeft(items)}
+						role='button'
+						tabIndex={0}
+					>
 						<i className='fi-arrow-left' />
 					</div>
 				)}
@@ -105,8 +111,14 @@ const AutoCarousel = ({
 				>
 					{generateItems(items)}
 				</TransitionGroup>
-				{autoRotate! && (
-					<div className='arrow arrow-right' onClick={() => moveRight(items)}>
+				{!autoRotate && (
+					<div
+						className='arrow arrow-right'
+						onClick={(): void => moveRight(items)}
+						onKeyDown={(): void => moveLeft(items)}
+						role='button'
+						tabIndex={0}
+					>
 						<i className='fi-arrow-right' />
 					</div>
 				)}

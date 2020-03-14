@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, ReactElement } from 'react'
 import Typed from 'typed.js'
 import './ParallaxTitle.scss'
 
-const ParallaxTitle = () => {
+const ParallaxTitle = (): ReactElement => {
 	const typed = useRef(null)
 
 	useEffect(() => {

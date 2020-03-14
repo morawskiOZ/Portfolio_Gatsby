@@ -28,8 +28,7 @@ const ProjectCard = ({
 			id={title}
 			key={title}
 			className='projectCard'
-			onClick={(event: React.MouseEvent): void => {
-				console.log(event)
+			onClick={(): void => {
 				if (isHovered) {
 					setIsHovered(false)
 				}
@@ -38,8 +37,7 @@ const ProjectCard = ({
 			onKeyDown={(): void => setIsHovered(true)}
 			onMouseEnter={(): void => setIsHovered(true)}
 			onMouseLeave={(): void => {
-
-				 setIsClicked(false)
+				setIsClicked(false)
 				setIsHovered(false)
 			}}
 			type='button'

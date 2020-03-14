@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
-export const Header = () => {
+export const Header = (): ReactElement => {
 	return (
 		<div>
 			,<h1>Header</h1>

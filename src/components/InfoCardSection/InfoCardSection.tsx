@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import './InfoCardSection.scss'
 
-const InfoCardSection = ({ children, id }) => {
+const InfoCardSection = ({ children, id }): ReactElement => {
 	return (
 		<>
 			<div className='InfoCardSection-container' id={id}>

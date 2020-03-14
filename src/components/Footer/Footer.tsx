@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import './Footer.scss'
 
-const Footer = () => {
+const Footer = (): ReactElement => {
 	const year = new Date().getFullYear()
 	return (
 		<footer className='Footer'>

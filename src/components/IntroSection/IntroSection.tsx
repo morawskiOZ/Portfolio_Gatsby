@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import '../TimeLine/TimeLine.scss'
 import './IntroSection.scss'
 
-const IntroSection = ({ children, id }) => {
+const IntroSection = ({ children, id }): ReactElement => {
 	return (
 		<>
 			<div className='IntroSection-container' id={id}>

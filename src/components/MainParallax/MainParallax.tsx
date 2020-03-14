@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import './MainParallax.scss'
 
 interface MainParallaxProps {
-	children: any
+	children: ReactElement
 	parallaxImage: string
 }
 
-const MainParallax = ({ parallaxImage, children }: MainParallaxProps) => {
+const MainParallax = ({
+	parallaxImage,
+	children,
+}: MainParallaxProps): ReactElement => {
 	const inlineStyles = {
 		backgroundImage: `url(${parallaxImage})`,
 	}

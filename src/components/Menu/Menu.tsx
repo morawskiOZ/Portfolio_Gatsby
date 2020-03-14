@@ -7,7 +7,7 @@ const Menu = (): ReactElement => {
 	const [activeButton, setActiveButton] = useState<number>(null)
 	const [open, setOpen] = useState<boolean>(false)
 	const [isStartPosition, setIsStartPosition] = useState<boolean>(false)
-	const buttonArray: any[] = [
+	const buttonArray: (string | number)[] = [
 		1,
 		'Intro',
 		1,
@@ -40,6 +40,7 @@ const Menu = (): ReactElement => {
 					{buttonArray.map((element, index) => {
 						if (element === 1) {
 							return (
+								// eslint-disable-next-line react/no-array-index-key
 								<div className='menu-item--divider' key={`divider${index}`} />
 							)
 						}
@@ -47,8 +48,9 @@ const Menu = (): ReactElement => {
 							<button
 								className={`menu-item ${activeButton === index &&
 									'menu-item--active'}`}
-								onClick={() => setActiveButton(index)}
+								onClick={(): void => setActiveButton(index)}
 								key={element}
+								type='button'
 							>
 								<AnchorLink
 									href={`#${element}`}
@@ -64,7 +66,10 @@ const Menu = (): ReactElement => {
 			)}
 			<div
 				className={`menu-burgerMenu ${open ? 'menu-burgerMenu--open' : ''}`}
-				onClick={() => setOpen(!open)}
+				onClick={(): void => setOpen(!open)}
+				onKeyDown={(): void => setOpen(!open)}
+				role='button'
+				tabIndex={0}
 			>
 				<div
 					className={`menu-bar1 ${open ? 'menu-bar1--open' : ''}`}

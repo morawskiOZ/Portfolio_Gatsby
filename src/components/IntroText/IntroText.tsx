@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import './IntroText.scss'
 
-const IntroText = () => {
+const IntroText = (): ReactElement => {
 	return (
 		<section className='IntroText IntroText--centered appFrame--paddingBottom appFrame--paddingTop'>
 			<p>Creating reusable components in React with TypeScript is my jam.</p>

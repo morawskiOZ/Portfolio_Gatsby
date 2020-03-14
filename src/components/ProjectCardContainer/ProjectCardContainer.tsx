@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import ProjectCard, {
 	ProjectCardProps,
 } from 'src/components/ProjectCard/ProjectCard'
@@ -65,7 +65,7 @@ const projects: ProjectCardProps[] = [
 	},
 ]
 
-const ProjectCardContainer = () => {
+const ProjectCardContainer = (): ReactElement => {
 	return (
 		<div className='projectCard-container'>
 			{projects.map(

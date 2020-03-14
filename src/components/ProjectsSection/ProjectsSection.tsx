@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import './ProjectsSection.scss'
 
-const ProjectsSection = ({ children, id }) => {
+const ProjectsSection = ({ children, id }): ReactElement => {
 	return (
 		<>
 			<div className='ProjectsSection-container' id={id}>

@@ -1,4 +1,3 @@
-import { InfoLinkProps } from 'components/InfoCard/InfoCard'
 import React from 'react'
 import { mongoDbIcon, nodeJSIcon } from '../../icons/backEndIcons'
 import { gitIcon, ubuntuIcon } from '../../icons/developmentIcons'
@@ -13,6 +12,7 @@ import {
 import GitHubSvg from '../../icons/github.svg'
 import HomeSvg from '../../icons/home.svg'
 import LinkedInSvg from '../../icons/linkedIn.svg'
+import { InfoLinkProps } from './types'
 
 export const links: InfoLinkProps[] = [
 	{
