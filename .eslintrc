@@ -90,6 +90,7 @@
 			2,
 			{ "allowForLoopAfterthoughts": true
 			}
-		]
+		],
+		"no-console": 2
 	}
 }

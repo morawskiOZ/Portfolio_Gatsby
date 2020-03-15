@@ -12,12 +12,12 @@
   justify-content: center;
   grid-column: 2;
   overflow: hidden;
-  z-index: -1; 
+  z-index: -1;
 }
 
-@media screen and (max-width: 500px) {  
+@media screen and (max-width: 500px) {
   .autoCarousel {
-    height: 130px; 
+    height: 130px;
   }
 }
 .arrow {
@@ -62,7 +62,7 @@
   height: var(--level2-height);
   width: var(--level2-width);
   line-height: var(--level2-height);
-  margin-top: var(--margin-top-animation-active)
+  margin-top: var(--margin-top-animation-active);
 }
 
 .left-leave.left-leave-active {
@@ -88,8 +88,7 @@
   margin-top: var(--margin-top-animation-active);
   line-height: var(--level2-height);
   width: var(--level2-width);
-  transition: left 1s, opacity 1s, height 1s, width 1s,
-    line-height 1s;
+  transition: left 1s, opacity 1s, height 1s, width 1s, line-height 1s;
 }
 
 .right-leave {
@@ -108,8 +107,7 @@
   width: var(--level2-width) - 20;
   line-height: var(--level2-height) - 30;
   margin-top: var(--margin-top-animation);
-  transition: left 1s, opacity 1s, height 1s, width 1s,
-    line-height 1s;
+  transition: left 1s, opacity 1s, height 1s, width 1s, line-height 1s;
 }
 
 .noselect {

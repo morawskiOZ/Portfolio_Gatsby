@@ -1,7 +1,7 @@
 .downArrow {
   position: absolute;
   left: calc(50% + 5px);
-  bottom: 100px;
+  bottom: 175px;
   &--flex {
     display: flex;
     flex-direction: column;
@@ -9,9 +9,9 @@
   }
   i {
     border: solid white;
-    border-width: 0 5px 5px 0;
+    border-width: 0 8px 8px 0;
     display: inline-block;
-    padding: 40px;
+    padding: 45px;
     position: absolute;
   }
 
@@ -36,10 +36,11 @@
 
 @media screen and (max-width: 700px) {
   .downArrow {
+    bottom: 200px;
     left: 51%;
     i {
-      border-width: 0 3px 3px 0;
-      padding: 30px;
+      border-width: 0 5px 5px 0;
+      padding: 40px;
     }
   }
 }

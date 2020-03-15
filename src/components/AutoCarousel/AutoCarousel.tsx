@@ -1,6 +1,6 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 // import _ from "lodash"
-import { TransitionGroup } from 'react-transition-group'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import './AutoCarousel.scss'
 import CarouselsItem from './CarouselsItem/CarouselsItem'
 import './foundation-icon/foundation-icons.scss'
@@ -17,7 +17,7 @@ const AutoCarousel = ({
 	autoRotate,
 }: AutoCarouselProps): ReactElement => {
 	const [activeElementIndex, setActiveElementIndex] = useState<number>(5)
-	const [direction, setDirection] = useState<string>('')
+	const [direction, setDirection] = useState<string>('left')
 
 	const generateItems = (itemsArray): ReactElement[] => {
 		const carouselItems = []
@@ -31,15 +31,17 @@ const AutoCarousel = ({
 			}
 			level = activeElementIndex - i
 			carouselItems.push(
-				<CarouselsItem
-					key={index}
-					id={String(index)}
-					level={level}
-					component={itemsArray[index]}
-				/>
+				<CSSTransition in timeout={200} classNames={direction} key={index}>
+					<CarouselsItem
+						id={String(index)}
+						level={level}
+						component={itemsArray[index]}
+					/>
+				</CSSTransition>
 			)
 		}
-		return carouselItems
+
+		return carouselItems.slice(-5)
 	}
 
 	// const onClickHandler = ({ target }: any) => {
@@ -53,7 +55,6 @@ const AutoCarousel = ({
 				? itemsArray.length - 1
 				: prevActiveElementIndex - 1
 		)
-		setDirection('left')
 	}
 
 	// Debounce to add when there will be direction control in carousel
@@ -69,14 +70,14 @@ const AutoCarousel = ({
 		setActiveElementIndex(
 			prevActiveElementIndex => (prevActiveElementIndex + 1) % itemsArray.length
 		)
-		setDirection('right')
 	}
 
 	const autoTurn = (): void => {
 		if (direction === 'left') {
 			moveLeft(items)
+		} else if (direction === 'right') {
+			moveRight(items)
 		}
-		moveRight(items)
 	}
 	// TODO add when user scrolls to this part, it stars moving
 	useEffect(() => {
@@ -92,30 +93,22 @@ const AutoCarousel = ({
 				{!autoRotate && (
 					<div
 						className='arrow arrow-left'
-						onClick={(): void => moveLeft(items)}
-						onKeyDown={(): void => moveLeft(items)}
+						onClick={(): void => setDirection('left')}
+						onKeyDown={(): void => setDirection('left')}
 						role='button'
 						tabIndex={0}
 					>
 						<i className='fi-arrow-left' />
 					</div>
 				)}
-				<TransitionGroup
-					component='div'
-					className='carouselItem-container'
-					transitionName={direction}
-					transitionAppearTimeout={500}
-					transitionEnterTimeout={500}
-					transitionLeaveTimeout={500}
-					transitionAppear
-				>
+				<TransitionGroup component='div' className='carouselItem-container'>
 					{generateItems(items)}
 				</TransitionGroup>
 				{!autoRotate && (
 					<div
 						className='arrow arrow-right'
-						onClick={(): void => moveRight(items)}
-						onKeyDown={(): void => moveLeft(items)}
+						onClick={(): void => setDirection('right')}
+						onKeyDown={(): void => setDirection('right')}
 						role='button'
 						tabIndex={0}
 					>
