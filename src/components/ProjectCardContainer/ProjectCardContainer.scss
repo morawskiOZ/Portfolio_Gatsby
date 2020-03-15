@@ -1,0 +1,23 @@
+@import "../../components/App/variables";
+
+.projectCard {
+  &-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax($image-width, 1fr));
+    justify-items: center;
+    align-items: center;
+    @media screen and (min-width: 500px) {
+      margin: 0 25px;
+    }
+    @media screen and (min-width: 700px) {
+      margin: 0 60px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin: 0 120px;
+    }
+    @media screen and (min-width: 1800px) {
+      margin: 0 180px;
+    }
+  }
+}

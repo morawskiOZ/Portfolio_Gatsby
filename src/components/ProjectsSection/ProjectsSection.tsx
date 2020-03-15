@@ -4,7 +4,7 @@ import './ProjectsSection.scss'
 const ProjectsSection = ({ children, id }): ReactElement => {
 	return (
 		<>
-			<div className='ProjectsSection-container' id={id}>
+			<div className='ProjectsSection-decorators' id={id}>
 				<div className='TimeLine-firstDot'>
 					<h2 className='ProjectsSection-title'>Projects </h2>
 					<div className='TimeLine-firstDot--inner' />

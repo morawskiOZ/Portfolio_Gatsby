@@ -26,6 +26,7 @@ a:hover {
   &-timeLineZone {
     position: relative;
     grid-column: 3;
+    width: 100%;
     & > * {
       padding-bottom: 10px;
     }

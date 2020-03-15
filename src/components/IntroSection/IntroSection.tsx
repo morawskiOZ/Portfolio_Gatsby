@@ -7,7 +7,6 @@ const IntroSection = ({ children, id }): ReactElement => {
 		<>
 			<div className='IntroSection-container' id={id}>
 				<div className='TimeLine-firstLine' />
-
 				<div className='TimeLine-firstDot'>
 					<h2 className='IntroSection-title'>Intro </h2>
 					<div className='TimeLine-firstDot--inner' />

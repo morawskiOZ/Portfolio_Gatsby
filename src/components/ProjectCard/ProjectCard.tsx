@@ -42,35 +42,36 @@ const ProjectCard = ({
 			}}
 			type='button'
 		>
-			<div className='projectCard-picture' style={inlineStyle} />
-			<div
-				className={`projectCard-overlay ${
-					isHovered || isClicked ? 'projectCard-overlay--shown' : ''
-				}`}
-			>
-				<h3 className='projectCard-title'>{title}</h3>
-				<p className='projectCard-description'>{description}</p>
-				<div className='projectCard-links'>
-					{liveLink && (
+			<div className='projectCard-picture' style={inlineStyle}>
+				<div
+					className={`projectCard-overlay ${
+						isHovered || isClicked ? 'projectCard-overlay--shown' : ''
+					}`}
+				>
+					<h3 className='projectCard-title'>{title}</h3>
+					<p className='projectCard-description'>{description}</p>
+					<div className='projectCard-links'>
+						{liveLink && (
+							<a
+								className='projectCard-link'
+								href={liveLink}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<ReactSvg className='projectCard-svg' />
+								<p>Live link</p>
+							</a>
+						)}
 						<a
 							className='projectCard-link'
-							href={liveLink}
+							href={codeLink}
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							<ReactSvg className='projectCard-svg' />
-							<p>Live link</p>
+							<GitHubSvg className='projectCard-svg' />
+							<p>See the code</p>
 						</a>
-					)}
-					<a
-						className='projectCard-link'
-						href={codeLink}
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<GitHubSvg className='projectCard-svg' />
-						<p>See the code</p>
-					</a>
+					</div>
 				</div>
 			</div>
 		</button>
