@@ -17,7 +17,7 @@ const AutoCarousel = ({
 	autoRotate,
 }: AutoCarouselProps): ReactElement => {
 	const [activeElementIndex, setActiveElementIndex] = useState<number>(5)
-	const [direction, setDirection] = useState<string>('left')
+	const [direction, setDirection] = useState<string>('right')
 
 	const generateItems = (itemsArray): ReactElement[] => {
 		const carouselItems = []
