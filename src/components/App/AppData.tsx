@@ -1,4 +1,5 @@
 import React from 'react'
+import CircleCILogo from 'src/icons/CircleCILogo.svg'
 import { mongoDbIcon, nodeJSIcon } from '../../icons/backEndIcons'
 import { gitIcon, ubuntuIcon } from '../../icons/developmentIcons'
 import {
@@ -8,6 +9,7 @@ import {
 	JSIcon,
 	reactIcon,
 	SassIcon,
+	TypeScriptIcon,
 } from '../../icons/frontEndIcons'
 import GitHubSvg from '../../icons/github.svg'
 import HomeSvg from '../../icons/home.svg'
@@ -39,6 +41,7 @@ export const frontEndIcons = [
 	jQueryIcon,
 	JSIcon,
 	SassIcon,
+	TypeScriptIcon,
 ]
 export const backEndIcons = [mongoDbIcon, nodeJSIcon]
-export const developmentIcons = [gitIcon, ubuntuIcon]
+export const developmentIcons = [gitIcon, ubuntuIcon, <CircleCILogo />]
