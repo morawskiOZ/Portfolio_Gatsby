@@ -1,19 +1,12 @@
 import React, { ReactElement } from 'react'
 import './InfoCardSection.scss'
+import { TimeLine } from '../TimeLine/TimeLine'
 
 const InfoCardSection = ({ children, id }): ReactElement => {
 	return (
 		<>
 			<div className='InfoCardSection-container' id={id}>
-				<div className='TimeLine-firstDot'>
-					<h2 className='InfoCardSection-title'>Contact </h2>
-					<div className='TimeLine-firstDot--inner' />
-				</div>
-				<div className='TimeLine-secondLine' />
-				<div className='TimeLine-secondDot'>
-					<div className='TimeLine-secondDot--inner' />
-				</div>
-				<div className='TimeLine-thirdLine' />
+				<TimeLine title='Contact' />
 			</div>
 			{children}
 		</>

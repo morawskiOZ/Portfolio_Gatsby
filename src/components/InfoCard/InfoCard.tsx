@@ -7,7 +7,6 @@ import { InfoLinkProps } from '../App/types'
 interface InfoCardProps {
 	fullName: string
 	title: string
-	city?: string
 	email?: string
 	photoUrl?: string
 	links?: InfoLinkProps[]
@@ -18,7 +17,6 @@ export const InfoCard = ({
 	links,
 	photoUrl,
 	title,
-	city,
 }: InfoCardProps): ReactElement => {
 	const inlineStyles = {
 		backgroundImage: `url(${photoUrl})`,
@@ -30,7 +28,6 @@ export const InfoCard = ({
 				<div className='infoCard-info'>
 					<h1 className='infoCard-name'>{fullName}</h1>
 					<h2 className='infoCard-title'>{title}</h2>
-					<h3 className='infoCard-description'>{city}</h3>
 					<div className='infoCard-links'>
 						{links.map(link => (
 							<InfoCardLink

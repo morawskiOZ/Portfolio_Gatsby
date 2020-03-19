@@ -27,7 +27,7 @@ const ContactForm = (): ReactElement => {
 	return (
 		<form className='ContactForm' onSubmit={handleSubmit}>
 			<label className='ContactForm-label' htmlFor='message'>
-				Message
+				<p className='ContactForm-label--text'>Message</p>
 				<textarea
 					onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
 						setMessage(e.target.value)
@@ -42,7 +42,7 @@ const ContactForm = (): ReactElement => {
 			</label>
 
 			<label className='ContactForm-label' htmlFor='name'>
-				Name
+				<p className='ContactForm-label--text'>Name</p>
 				<input
 					onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
 						setName(e.target.value)
@@ -57,7 +57,7 @@ const ContactForm = (): ReactElement => {
 			</label>
 
 			<label className='ContactForm-label' htmlFor='email'>
-				Email
+				<p className='ContactForm-label--text'>Email</p>
 				<input
 					onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
 						setEmail(e.target.value)

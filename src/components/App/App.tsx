@@ -9,13 +9,15 @@ import DownArrows from 'src/components/MainParallax/DownArrows/DownArrows'
 import ParallaxTitle from 'src/components/MainParallax/ParallaxTitle/ParallaxTitle'
 import ProjectCardContainer from 'src/components/ProjectCardContainer/ProjectCardContainer'
 import parallax from 'src/photo/parallax3.jpg'
-import photoID from 'src/photo/photoID.png'
+import photoID from 'src/photo/photoID.jpg'
 import IntroText from '../IntroText/IntroText'
 import MainParallax from '../MainParallax/MainParallax'
 import Menu from '../Menu/Menu'
 import ProjectsSection from '../ProjectsSection/ProjectsSection'
 import './App.scss'
-import { backEndIcons, developmentIcons, frontEndIcons, links } from './AppData'
+import './reset.scss'
+
+import { backEndIcons, developmentIcons, frontEndIcons, links } from './data'
 
 const App = (): ReactElement => {
 	return (
@@ -43,7 +45,6 @@ const App = (): ReactElement => {
 				</ProjectsSection>
 				<InfoCardSection id='Contact'>
 					<InfoCard
-						city='Wroclaw'
 						email='piotrmorawski90@gmail.com'
 						fullName='Piotr Morawski'
 						title='Front-End Developer'

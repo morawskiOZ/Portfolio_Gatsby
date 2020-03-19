@@ -1,3 +1,5 @@
+@import "../../components/App/variables";
+
 :root {
   --right-page-margin: 15px;
 }
@@ -19,6 +21,10 @@
     background: #000;
     position: absolute;
     left: 50%;
+    @media screen and (min-width: 1000px) {
+      top: calc(-1 *  #{$first-section-margin-top});
+      height: calc(40px + #{$first-section-margin-top});
+    }
   }
   &-secondLine {
     background: #000;
@@ -73,5 +79,10 @@
     position: absolute;
     right: var(--right-page-margin);
     margin-top: 40px;
+  }
+  &-title {
+    position: absolute;
+    right: 35px;
+    top: -10px;
   }
 }
