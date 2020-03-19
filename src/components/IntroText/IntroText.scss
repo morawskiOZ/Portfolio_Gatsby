@@ -1,54 +1,11 @@
 .IntroText {
-  font-family: "Montserrat", sans-serif;
-  p {
-    font-size: 1.3rem;
+  max-width: 80vw;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  @media screen and (min-width: 768px) {
+    font-size: unset;
   }
   &--centered {
     grid-column: 2;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .IntroText {
-    p {
-      font-size: 1rem;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .IntroText {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .IntroText {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .IntroText {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .IntroText {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .IntroText {
-    max-width: 260px;
-    margin: 0 auto;
   }
 }
