@@ -6,6 +6,7 @@ const Menu = (): ReactElement => {
 	const [activeButton, setActiveButton] = useState<number>(null)
 	const [open, setOpen] = useState<boolean>(false)
 	const [isStartPosition, setIsStartPosition] = useState<boolean>(false)
+
 	const buttonArray: (string | number)[] = [
 		1,
 		'Intro',
