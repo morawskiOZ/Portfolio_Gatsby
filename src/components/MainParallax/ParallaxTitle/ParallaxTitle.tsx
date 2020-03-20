@@ -13,11 +13,17 @@ const ParallaxTitle = (): ReactElement => {
 			typeSpeed: 40,
 			showCursor: false,
 		}
-
-		typed.current = new Typed('.parallaxTitle', options)
+		const tagetElement = document.querySelector('#parallaxTitle')
+		if (tagetElement) {
+			typed.current = new Typed('#parallaxTitle', options)
+		}
 	}, [])
 
-	return <div className='parallaxTitle'>{typed.current}</div>
+	return (
+		<div className='parallaxTitle' id='parallaxTitle'>
+			{typed.current}
+		</div>
+	)
 }
 
 export default ParallaxTitle

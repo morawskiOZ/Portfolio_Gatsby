@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import Sticky from 'react-sticky-el'
 import AutoCarousel from 'src/components/AutoCarousel/AutoCarousel'
 import Footer from 'src/components/Footer/Footer'
 import { InfoCard } from 'src/components/InfoCard/InfoCard'
@@ -22,9 +21,7 @@ import { backEndIcons, developmentIcons, frontEndIcons, links } from './data'
 const App = (): ReactElement => {
 	return (
 		<>
-			<Sticky className='menu--sticky' topOffset={30}>
-				<Menu />
-			</Sticky>
+			<Menu />
 			<MainParallax parallaxImage={parallax}>
 				<>
 					<ParallaxTitle />
