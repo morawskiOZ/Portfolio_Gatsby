@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
-import '../TimeLine/TimeLine.scss'
+import 'src/components/TimeLine/TimeLine.scss'
 import './IntroSection.scss'
-import { TimeLine } from '../TimeLine/TimeLine'
+import { TimeLine } from '../../TimeLine/TimeLine'
 
 const IntroSection = ({ children, id }): ReactElement => {
 	return (

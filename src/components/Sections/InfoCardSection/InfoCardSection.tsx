@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import './InfoCardSection.scss'
-import { TimeLine } from '../TimeLine/TimeLine'
+import { TimeLine } from '../../TimeLine/TimeLine'
 
 const InfoCardSection = ({ children, id }): ReactElement => {
 	return (
