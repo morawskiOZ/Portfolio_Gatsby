@@ -1,14 +1,23 @@
-import { useRef, useLayoutEffect } from 'react'
+import { useRef, useLayoutEffect, RefObject } from 'react'
 
 const isBrowser = typeof window !== `undefined`
+
+interface Position {
+	prevPos: ScrollPositionObject
+	currPos: ScrollPositionObject
+}
+interface ScrollPositionObject {
+	x: number
+	y: number
+}
 
 const getScrollPosition = ({
 	element,
 	useWindow,
 }: {
-	element?: any
+	element?: RefObject<HTMLElement>
 	useWindow: boolean
-}): any => {
+}): ScrollPositionObject => {
 	if (!isBrowser) return { x: 0, y: 0 }
 
 	const target = element ? element.current : document.body
@@ -21,17 +30,18 @@ const getScrollPosition = ({
 }
 
 export const useScrollPosition = (
-	effect,
-	deps,
-	element,
-	useWindow,
-	wait
-): any => {
+	effect: (arg0: Position) => void,
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	deps: any[],
+	element: RefObject<HTMLElement>,
+	useWindow: boolean,
+	wait: number
+): void => {
 	const position = useRef(getScrollPosition({ useWindow }))
 
 	let throttleTimeout = null
 
-	const callBack = () => {
+	const callBack = (): void => {
 		const currPos = getScrollPosition({ element, useWindow })
 		effect({ prevPos: position.current, currPos })
 		position.current = currPos
@@ -39,7 +49,7 @@ export const useScrollPosition = (
 	}
 
 	useLayoutEffect(() => {
-		const handleScroll = () => {
+		const handleScroll = (): void => {
 			if (wait) {
 				if (throttleTimeout === null) {
 					throttleTimeout = setTimeout(callBack, wait)
@@ -51,6 +61,6 @@ export const useScrollPosition = (
 
 		window.addEventListener('scroll', handleScroll)
 
-		return () => window.removeEventListener('scroll', handleScroll)
+		return (): void => window.removeEventListener('scroll', handleScroll)
 	}, deps)
 }
