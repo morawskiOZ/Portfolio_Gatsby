@@ -1,6 +1,50 @@
-$burger-menu-size: 70px;
+.sticky {
+  z-index: 5;
+  & .menu-container {
+    grid-template-columns: auto 70px;
+    grid-template-areas: "menu hamburger";
+    @media screen and (min-width: 768px) {
+      grid-template-areas: "menu menu";
+      background-color: red;
+    }
+  }
+  & .menu {
+    z-index: 5;
+    background-color: black;
+    color: white;
+    height: 70px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    grid-area: menu;
 
+    & button {
+      width: unset !important;
+      min-width: unset;
+    }
+    &-burgerMenu {
+      display: grid;
+    }
+    &-item {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+      &--divider {
+        display: none;
+      }
+      &--active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 .menu {
+  &--sticky {
+    transform: none !important ;
+  }
   z-index: 5;
   margin: 0;
   padding: 0;
@@ -30,7 +74,6 @@ $burger-menu-size: 70px;
     position: absolute;
     display: grid;
     grid-template-columns: 50px auto 50px;
-
   }
   &-item {
     a {
@@ -72,15 +115,14 @@ $burger-menu-size: 70px;
     justify-content: center;
   }
   &-burgerMenu {
-    z-index: 1;
     display: none;
     justify-content: center;
     align-items: center;
     grid-area: hamburger;
     cursor: pointer;
     background: #fff;
-    height: $burger-menu-size;
-    width: $burger-menu-size;
+    height: 70px;
+    width: 70px;
     border-radius: 5px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   }
@@ -108,77 +150,6 @@ $burger-menu-size: 70px;
     align-self: start;
     &--open {
       transform: rotate(45deg) translate(-10px, -10px);
-    }
-  }
-}
-
-.sticky {
-  z-index: 5;
-  & .menu-container {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    right: 0;
-    left: 0;
-    grid-template-columns: auto #{$burger-menu-size};
-    grid-template-areas: "menu hamburger";
-    transition: top 0.3s ease-in-out;
-    &--isFirstTransition {
-      transition: none;
-      & .menu {
-        transition: none;
-      }
-    }
-    @media screen and (min-width: 768px) {
-      grid-template-areas: "menu menu";
-      &--folded {
-        top: -100px;
-      }
-    }
-  }
-  & .menu {
-    z-index: 5;
-    background-color: black;
-    color: white;
-    height: 70px;
-    display: grid;
-    justify-content: space-around;
-    grid-area: menu;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    &--isFirstTransition {
-      transition: none;
-    }
-    &--open {
-      opacity: 1;
-    }
-    @media screen and (min-width: 768px) {
-      opacity: 1;
-    }
-
-    & button {
-      width: unset !important;
-      min-width: unset;
-    }
-    &-burgerMenu {
-      display: grid;
-      @media screen and (min-width: 768px) {
-        display: none;
-      }
-    }
-    &-item {
-      color: #fff;
-      &:hover {
-        color: #fff;
-      }
-      &--divider {
-        display: none;
-      }
-      &--active {
-        &::after {
-          width: 100%;
-        }
-      }
     }
   }
 }
