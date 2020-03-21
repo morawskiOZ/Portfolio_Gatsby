@@ -33,6 +33,9 @@
     width: calc(49vw - var(--right-page-margin));
     top: 40px;
     right: var(--right-page-margin);
+    @media screen and (min-width: 1800px) {
+      width: calc(50vw - var(--right-page-margin));
+    }
   }
   &-firstDot {
     position: absolute;
