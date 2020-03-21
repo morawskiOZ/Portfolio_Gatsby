@@ -1,0 +1,16 @@
+.Footer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  grid-column: 1/-1;
+  padding-left: 25px;
+  color: white;
+  background: black;
+  height: 40px;
+  margin-top: 40px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  @media screen and (min-width: 425px) {
+    font-size: 0.7rem;
+  }
+}

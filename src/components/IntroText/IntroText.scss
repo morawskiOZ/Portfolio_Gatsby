@@ -1,0 +1,11 @@
+.IntroText {
+  max-width: 80vw;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  @media screen and (min-width: 768px) {
+    font-size: unset;
+  }
+  &--centered {
+    grid-column: 2;
+  }
+}

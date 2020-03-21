@@ -1,0 +1,211 @@
+.sticky {
+  z-index: 5;
+  & .menu-container {
+    grid-template-columns: auto 70px;
+    grid-template-areas: "menu hamburger";
+    @media screen and (min-width: 768px) {
+      grid-template-areas: "menu menu";
+      background-color: red;
+    }
+  }
+  & .menu {
+    z-index: 5;
+    background-color: black;
+    color: white;
+    height: 70px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    grid-area: menu;
+
+    & button {
+      width: unset !important;
+      min-width: unset;
+    }
+    &-burgerMenu {
+      display: grid;
+    }
+    &-item {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+      &--divider {
+        display: none;
+      }
+      &--active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.menu {
+  &--sticky {
+    transform: none !important ;
+  }
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+  height: 70px;
+  width: 100%;
+  grid-gap: 10px;
+  grid-column: 2;
+  &-item--divider {
+    position: relative;
+    &::after {
+      content: "";
+      width: 6px;
+      background: lightgrey;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      transform: skew(-20deg);
+      top: 0;
+      bottom: 0;
+    }
+  }
+  &-container {
+    width: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+  }
+  &-item {
+    a {
+      padding: 20px;
+      color: white;
+      &:hover {
+        color: white;
+      }
+    }
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+
+    &::after {
+      height: 2px;
+      background: lightgrey;
+      content: "";
+      width: 0;
+      position: absolute;
+      transform: translateX(-50%);
+      transition: width 0.4s;
+      transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+      margin-top: 2rem;
+      left: 50%;
+    }
+    &--active::after {
+      width: 15vw;
+    }
+  }
+
+  button {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 16px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    justify-content: center;
+  }
+  &-burgerMenu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    grid-area: hamburger;
+    cursor: pointer;
+    background: #fff;
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  &-bar1,
+  &-bar2,
+  &-bar3 {
+    width: 44px;
+    height: 4px;
+    background-color: #333;
+    transition: 0.4s;
+  }
+  &-bar1 {
+    align-self: end;
+    &--open {
+      transform: rotate(-45deg) translate(-10px, 10px);
+    }
+  }
+  &-bar2 {
+    &--open {
+      opacity: 0;
+    }
+  }
+  &-bar3 {
+    align-self: start;
+    &--open {
+      transform: rotate(45deg) translate(-10px, -10px);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    height: 50px;
+    &-item {
+      &--divider {
+        &::after {
+          width: 4px;
+        }
+      }
+      &::after {
+        margin-top: 18px;
+      }
+    }
+    a {
+      padding: 10px;
+    }
+    button {
+      font-size: 10px;
+    }
+  }
+}
+@media (min-width: 1800px) {
+  .menu {
+    height: 80px;
+    a {
+      padding: 30px;
+    }
+    button {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu--sticky:not(.sticky) {
+    .menu {
+      &-link {
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+  .menu--sticky.sticky {
+    .menu {
+      &-item:not(.menu-item--active) {
+        .menu-link {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

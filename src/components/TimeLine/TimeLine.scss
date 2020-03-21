@@ -1,0 +1,88 @@
+@import "../../components/App/variables";
+
+:root {
+  --right-page-margin: 15px;
+}
+@media screen and (min-width: 700px) {
+  :root {
+    --right-page-margin: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    --right-page-margin: 45px;
+  }
+}
+
+.TimeLine {
+  &-firstLine {
+    height: 40px;
+    width: 10px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    @media screen and (min-width: 1000px) {
+      top: calc(-1 *  #{$first-section-margin-top});
+      height: calc(40px + #{$first-section-margin-top});
+    }
+  }
+  &-secondLine {
+    background: #000;
+    position: absolute;
+    height: 10px;
+    width: calc(50vw - var(--right-page-margin));
+    top: 40px;
+    right: var(--right-page-margin);
+  }
+  &-firstDot {
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 30px;
+    height: 26px;
+    width: 26px;
+    background-color: #000;
+    border-radius: 50%;
+    &--inner {
+      height: 12px;
+      width: 12px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 3;
+      left: 7px;
+      top: 7px;
+    }
+  }
+  &-secondDot {
+    position: absolute;
+    top: 33px;
+    height: 26px;
+    width: 26px;
+    background-color: #000;
+    border-radius: 50%;
+    right: calc(var(--right-page-margin) - 8px);
+    &--inner {
+      height: 12px;
+      width: 12px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 3;
+      left: 7px;
+      top: 7px;
+    }
+  }
+  &-thirdLine {
+    height: 100%;
+    width: 10px;
+    background: #000;
+    position: absolute;
+    right: var(--right-page-margin);
+    margin-top: 40px;
+  }
+  &-title {
+    position: absolute;
+    right: 35px;
+    top: -9px;
+  }
+}
