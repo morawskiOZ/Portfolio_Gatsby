@@ -59,7 +59,7 @@ const ProjectCard = ({
 								rel='noopener noreferrer'
 							>
 								<ReactSvg className='projectCard-svg' />
-								<p>Live link</p>
+								<p className='projectCard-linkDescription'>Live link</p>
 							</a>
 						)}
 						<a
@@ -69,7 +69,7 @@ const ProjectCard = ({
 							rel='noopener noreferrer'
 						>
 							<GitHubSvg className='projectCard-svg' />
-							<p>See the code</p>
+							<p className='projectCard-linkDescription'>See the code</p>
 						</a>
 					</div>
 				</div>

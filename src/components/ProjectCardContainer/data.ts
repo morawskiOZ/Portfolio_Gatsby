@@ -1,4 +1,4 @@
-import { ProjectCardProps } from 'src/components/ProjectCard/ProjectCard'
+import { ProjectCardProps } from 'src/components/ProjectCardContainer/ProjectCard/ProjectCard'
 import batman from 'src/photo/batman.png'
 import express from 'src/photo/express.png'
 import fruits from 'src/photo/fruits.png'
@@ -32,7 +32,7 @@ export const projects: ProjectCardProps[] = [
 			'Express server boilerplate with mailing. Easy to scale up with more routes and controllers. TypeScript ready.',
 		id: 'express',
 		photoURL: express,
-		title: 'Express Server with mailing',
+		title: 'Mailing server',
 	},
 	{
 		codeLink: 'https://github.com/morawskiOZ/Game_Of_Life',

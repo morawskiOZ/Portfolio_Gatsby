@@ -1,20 +1,22 @@
-@import "../../components/App/variables";
+@import "src/components/App/variables";
 
 .projectCard {
+  outline: none;
   display: grid;
   background-color: #fff;
   &-picture {
+    border-radius: 7px;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     width: $image-width;
     height: $image-height;
   }
   &-description {
     padding: 0 10px 0 10px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 5px;
@@ -63,9 +65,15 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+  &-linkDescription {
+    font-size: 0.5rem;
+    justify-self: start;
   }
   &-svg {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
   }
 }

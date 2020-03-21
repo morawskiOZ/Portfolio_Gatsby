@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import ProjectCard from 'src/components/ProjectCard/ProjectCard'
+import ProjectCard from 'src/components/ProjectCardContainer/ProjectCard/ProjectCard'
 import './ProjectCardContainer.scss'
 import { projects } from './data'
 
