@@ -44,7 +44,10 @@ const App = (): ReactElement => {
 					property='og:title'
 					content='Piotr Morawski | Frontend developer'
 				/>
-				<meta property='og:description' content='Lorem Ipsum' />
+				<meta
+					property='og:description'
+					content='Favorite stack for now? React, TS, Node, Netlify, CircleCI, Jest. Also React Native maniac and trying to absorb Golang'
+				/>
 				<meta property='og:url' content='https://yourapp.com' />
 				<meta property='og:site_name' content='Portfolio' />
 				<meta
