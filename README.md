@@ -1,6 +1,6 @@
 ### TODO
 
-CDN Images
-SEO 100  - 
-pRJEKT OVERLAY USER CHCE KLIKNAC I ZOBACZYC PO PROSTU
-Prjekt overlay większ przycisko
+- CDN Images
+- SEO 100  - 
+- user expirience with image overlay, click an go
+- bugger buttons on project overlay
