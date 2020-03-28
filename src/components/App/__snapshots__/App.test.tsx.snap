@@ -391,11 +391,19 @@ Array [
       className="IntroText IntroText--centered appFrame--paddingBottom appFrame--paddingTop"
     >
       <p>
+        I created this portfolio to practice and learn new technologies. Ex SimScale developer currently working in Wroclaw for Limango.
+      </p>
+      <br />
+      <p>
         Creating reusable components in React with TypeScript is my jam. For styles I prefer JSS but sure can get my hands dirty with old-school Sass.
       </p>
       <br />
       <p>
         Everything can be tested is my motto. Unit tests with Jest. E2E tests? You bet, Cucumber and Puppeteer is my go to for them.
+      </p>
+      <br />
+      <p>
+        I love and use Netlify for simplicity. CircleCI for one push deployments with GitHub.
       </p>
       <br />
       <p>
@@ -412,7 +420,7 @@ Array [
         <h2
           className="TimeLine-title"
         >
-          Projects
+          Portfolio
            
         </h2>
         <div
@@ -464,7 +472,7 @@ Array [
             <p
               className="projectCard-description"
             >
-              React project with TypeScript and SCSS. Plus Node.js server with Express for mailing.
+              Gatsby project with one push CI process and automatic deployment on Netlify.
             </p>
             <div
               className="projectCard-links"
@@ -486,7 +494,7 @@ Array [
               </a>
               <a
                 className="projectCard-link"
-                href="https://github.com/morawskiOZ/Portfolio"
+                href="https://github.com/morawskiOZ/Portfolio_Gatsby"
                 rel="noopener noreferrer"
                 target="_blank"
               >
