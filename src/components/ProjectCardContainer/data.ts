@@ -10,8 +10,7 @@ import './ProjectCardContainer.scss'
 export const projects: ProjectCardProps[] = [
 	{
 		codeLink: 'https://github.com/morawskiOZ/Portfolio_Gatsby',
-		description:
-			'Gatsby project with one push CI process and automatic deployment on Netlify.',
+		description: 'Gatsby project with CI and one push deployment on Netlify.',
 		id: 'portfolio',
 		liveLink: '#',
 		photoURL: portfolio,
@@ -21,7 +20,7 @@ export const projects: ProjectCardProps[] = [
 		codeLink: 'https://github.com/morawskiOZ/Monterail_Task',
 		description: 'Multi input and dynamic form with validation',
 		id: 'monterail',
-		liveLink: 'https://https://monterail-morawski.herokuapp.com//',
+		liveLink: 'https://https://monterail-morawski.herokuapp.com',
 		photoURL:
 			'https://pmorawski.s3.eu-west-2.amazonaws.com/monterail_on_laptop.png',
 		title: 'Event Form',
@@ -35,8 +34,7 @@ export const projects: ProjectCardProps[] = [
 	},
 	{
 		codeLink: 'https://github.com/morawskiOZ/Get_Prime_Numbers',
-		description:
-			'APP that shows prime numbers between given inputs. PUG front-end with Express server. Mocha unit tests.',
+		description: 'APP that shows prime numbers between given inputs.',
 		id: 'Prime',
 		liveLink: 'https://where-are-my-primes.herokuapp.com/',
 		photoURL: prime,
@@ -61,8 +59,7 @@ export const projects: ProjectCardProps[] = [
 	},
 	{
 		codeLink: 'https://github.com/morawskiOZ/Fruits_Web',
-		description:
-			'Website created from pdf as a recruitment task, the very beginning of my Front-End career',
+		description: 'Website created from pdf as a recruitment task',
 		id: 'fruits',
 		liveLink: 'https://morawskioz.github.io/Fruits_Web/',
 		photoURL: fruits,
@@ -70,8 +67,7 @@ export const projects: ProjectCardProps[] = [
 	},
 	{
 		codeLink: 'https://github.com/morawskiOZ/Furry_Game',
-		description:
-			'My first game in JS. Very early stages of my Web technologies learning process',
+		description: 'My first game in JS. Move batman to collect Kryptonite :)',
 		id: 'batman',
 		liveLink: 'https://morawskioz.github.io/Furry_Game/',
 		photoURL: batman,

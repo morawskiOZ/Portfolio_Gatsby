@@ -13,8 +13,8 @@ const ParallaxTitle = (): ReactElement => {
 			typeSpeed: 40,
 			showCursor: false,
 		}
-		const tagetElement = document.querySelector('#parallaxTitle')
-		if (tagetElement) {
+		const targetElement = document.querySelector('#parallaxTitle')
+		if (targetElement) {
 			typed.current = new Typed('#parallaxTitle', options)
 		}
 	}, [])
