@@ -26,6 +26,7 @@ Hosted through Cloudflare on GoDaddy. Amazon S3 CDN for images.
 
 #### Backlog
 
+- Optimize fonts serving - use CDN
 - Add more tests
 - CDN Images -  performance
 - SEO 100  - lighthouse score shows some improvements needed
