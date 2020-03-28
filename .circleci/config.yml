@@ -22,7 +22,7 @@ commands:
           command: sudo npm install -g --silent netlify-cli
       - run:
           name: build functions
-          command: npm run clean:functions && && npm run postinstall && npm run build:function-send-email
+          command: npm run clean:functions && npm run postinstall && npm run build:function-send-email
       - run:
           name: build
           command: npm run build
