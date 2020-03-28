@@ -33,6 +33,8 @@ Hosted through Cloudflare on GoDaddy. Amazon S3 CDN for images.
 - Styling migration to JSS
 - Styling needs refactoring, lots of bad quality, repetitive code,
 - Move content to Headless CMS like Contentful
+- automate with bash script build/npm i for each function
+
 
 ### Bugs
 

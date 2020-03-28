@@ -15,7 +15,8 @@
 		"clean": "gatsby clean",
 		"test": "jest",
 		"clean:functions": "rm -rf functions-build && mkdir functions-build",
-		"postinstall": "netlify-lambda install functions/send-email"
+		"postinstall": "netlify-lambda install functions",
+		"build:function-send-email": "netlify-lambda build functions/send-email"
 	},
 	"dependencies": {
 		"axios": "^0.19.2",
