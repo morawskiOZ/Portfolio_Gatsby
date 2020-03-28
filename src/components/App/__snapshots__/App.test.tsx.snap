@@ -90,7 +90,7 @@ Array [
       className="mainParallax-image"
       style={
         Object {
-          "backgroundImage": "url(test-file-stub)",
+          "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/parallax3.jpg)",
         }
       }
     >
@@ -472,7 +472,7 @@ Array [
             <p
               className="projectCard-description"
             >
-              Gatsby project with one push CI process and automatic deployment on Netlify.
+              Gatsby project with CI and one push deployment on Netlify.
             </p>
             <div
               className="projectCard-links"
@@ -495,6 +495,125 @@ Array [
               <a
                 className="projectCard-link"
                 href="https://github.com/morawskiOZ/Portfolio_Gatsby"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <test-file-stub
+                  className="projectCard-svg"
+                />
+                <p
+                  className="projectCard-linkDescription"
+                >
+                  See the code
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </button>
+      <button
+        className="projectCard"
+        id="Event Form"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
+      >
+        <div
+          className="projectCard-picture"
+          style={
+            Object {
+              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/monterail_on_laptop.png)",
+            }
+          }
+        >
+          <div
+            className="projectCard-overlay "
+          >
+            <h3
+              className="projectCard-title"
+            >
+              Event Form
+            </h3>
+            <p
+              className="projectCard-description"
+            >
+              Multi input and dynamic form with validation
+            </p>
+            <div
+              className="projectCard-links"
+            >
+              <a
+                className="projectCard-link"
+                href="https://https://monterail-morawski.herokuapp.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <test-file-stub
+                  className="projectCard-svg"
+                />
+                <p
+                  className="projectCard-linkDescription"
+                >
+                  Live link
+                </p>
+              </a>
+              <a
+                className="projectCard-link"
+                href="https://github.com/morawskiOZ/Monterail_Task"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <test-file-stub
+                  className="projectCard-svg"
+                />
+                <p
+                  className="projectCard-linkDescription"
+                >
+                  See the code
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </button>
+      <button
+        className="projectCard"
+        id="Debtor search UI"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
+      >
+        <div
+          className="projectCard-picture"
+          style={
+            Object {
+              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/image_KRD.png)",
+            }
+          }
+        >
+          <div
+            className="projectCard-overlay "
+          >
+            <h3
+              className="projectCard-title"
+            >
+              Debtor search UI
+            </h3>
+            <p
+              className="projectCard-description"
+            >
+              Interface to search for debtors data from remote API
+            </p>
+            <div
+              className="projectCard-links"
+            >
+              <a
+                className="projectCard-link"
+                href="https://github.com/morawskiOZ/KRD_task"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -539,7 +658,7 @@ Array [
             <p
               className="projectCard-description"
             >
-              APP that shows prime numbers between given inputs. PUG front-end with Express server. Mocha unit tests.
+              APP that shows prime numbers between given inputs.
             </p>
             <div
               className="projectCard-links"
@@ -725,7 +844,7 @@ Array [
             <p
               className="projectCard-description"
             >
-              Website created from pdf as a recruitment task, the very beginning of my Front-End career
+              Website created from pdf as a recruitment task
             </p>
             <div
               className="projectCard-links"
@@ -792,7 +911,7 @@ Array [
             <p
               className="projectCard-description"
             >
-              My first game in JS. Very early stages of my Web technologies learning process
+              My first game in JS. Move batman to collect Kryptonite :)
             </p>
             <div
               className="projectCard-links"
