@@ -23,12 +23,12 @@ exports.handler = function(event, context, callback) {
 		})
 	}
 	const { token, name, email, message } = JSON.parse(event.body)
-	const url = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RE_CAPTCHA_SERVER_DEV}&response=${token}`
+	const url = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RE_CAPTCHA_SERVER}&response=${token}`
 	https
 		.get(url, resp => {
 			let data = ''
 
-			// A chunk of data has been recieved.
+			// A chunk of data has been received.
 			resp.on('data', chunk => {
 				data += chunk
 			})
