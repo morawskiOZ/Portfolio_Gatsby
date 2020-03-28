@@ -9,9 +9,9 @@ import './ProjectCardContainer.scss'
 
 export const projects: ProjectCardProps[] = [
 	{
-		codeLink: 'https://github.com/morawskiOZ/Portfolio',
+		codeLink: 'https://github.com/morawskiOZ/Portfolio_Gatsby',
 		description:
-			'React project with TypeScript and SCSS. Plus Node.js server with Express for mailing.',
+			'Gatsby project with one push CI process and automatic deployment on Netlify.',
 		id: 'portfolio',
 		liveLink: '#',
 		photoURL: portfolio,
