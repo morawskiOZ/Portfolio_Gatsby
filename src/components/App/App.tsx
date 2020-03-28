@@ -6,7 +6,6 @@ import ParallaxTitle from 'src/components/MainParallax/ParallaxTitle/ParallaxTit
 import ProjectCardContainer from 'src/components/ProjectCardContainer/ProjectCardContainer'
 import InfoCardSection from 'src/components/Sections/InfoCardSection/InfoCardSection'
 import IntroSection from 'src/components/Sections/IntroSection/IntroSection'
-import parallax from 'src/photo/parallax3.jpg'
 import photoID from 'src/photo/photoID.jpg'
 import IntroText from '../IntroText/IntroText'
 import MainParallax from '../MainParallax/MainParallax'
@@ -25,7 +24,7 @@ const App = (): ReactElement => {
 			<SEO />
 			<SCRIPTS />
 			<Menu />
-			<MainParallax parallaxImage={parallax}>
+			<MainParallax parallaxImage='https://pmorawski.s3.eu-west-2.amazonaws.com/parallax3.jpg'>
 				<>
 					<ParallaxTitle />
 					<DownArrows href='#Intro' />
