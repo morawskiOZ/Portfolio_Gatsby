@@ -6,7 +6,7 @@ const ProjectsSection = ({ children, id }): ReactElement => {
 	return (
 		<>
 			<div className='ProjectsSection-decorators' id={id}>
-				<TimeLine title='Projects' />
+				<TimeLine title='Portfolio' />
 			</div>
 			{children}
 		</>
