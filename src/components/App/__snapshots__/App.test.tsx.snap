@@ -762,7 +762,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(test-file-stub)",
+              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/gameOfLife_small.jpg)",
             }
           }
         >
@@ -992,7 +992,7 @@ Array [
           className="infoCard-photo"
           style={
             Object {
-              "backgroundImage": "url(test-file-stub)",
+              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/avatar_Limango.jpg)",
             }
           }
         />

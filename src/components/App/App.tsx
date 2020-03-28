@@ -6,7 +6,6 @@ import ParallaxTitle from 'src/components/MainParallax/ParallaxTitle/ParallaxTit
 import ProjectCardContainer from 'src/components/ProjectCardContainer/ProjectCardContainer'
 import InfoCardSection from 'src/components/Sections/InfoCardSection/InfoCardSection'
 import IntroSection from 'src/components/Sections/IntroSection/IntroSection'
-import photoID from 'src/photo/photoID.jpg'
 import IntroText from '../IntroText/IntroText'
 import MainParallax from '../MainParallax/MainParallax'
 import Menu from '../Menu/Menu'
@@ -48,7 +47,7 @@ const App = (): ReactElement => {
 						fullName='Piotr Morawski'
 						title='Front-End Developer'
 						links={links}
-						photoUrl={photoID}
+						photoUrl='https://pmorawski.s3.eu-west-2.amazonaws.com/avatar_Limango.jpg'
 					/>
 				</InfoCardSection>
 			</div>

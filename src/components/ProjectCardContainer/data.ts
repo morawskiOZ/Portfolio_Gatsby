@@ -2,7 +2,6 @@ import { ProjectCardProps } from 'src/components/ProjectCardContainer/ProjectCar
 import batman from 'src/photo/batman.png'
 import express from 'src/photo/express.png'
 import fruits from 'src/photo/fruits.png'
-import gameOfLife from 'src/photo/gameOfLife.jpg'
 import portfolio from 'src/photo/portfolio.jpg'
 import prime from 'src/photo/prime.png'
 import './ProjectCardContainer.scss'
@@ -54,7 +53,8 @@ export const projects: ProjectCardProps[] = [
 			'Classic 0 player game - Game of Life. My second project in JS',
 		id: 'gameOfLife',
 		liveLink: 'https://morawskioz.github.io/Game_Of_Life/',
-		photoURL: gameOfLife,
+		photoURL:
+			'https://pmorawski.s3.eu-west-2.amazonaws.com/gameOfLife_small.jpg',
 		title: 'Game of Life',
 	},
 	{
