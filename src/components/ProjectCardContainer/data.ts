@@ -20,11 +20,18 @@ export const projects: ProjectCardProps[] = [
 	{
 		codeLink: 'https://github.com/morawskiOZ/Monterail_Task',
 		description: 'Multi input and dynamic form with validation',
-		id: 'Prime',
+		id: 'monterail',
 		liveLink: 'https://https://monterail-morawski.herokuapp.com//',
 		photoURL:
 			'https://pmorawski.s3.eu-west-2.amazonaws.com/monterail_on_laptop.png',
 		title: 'Event Form',
+	},
+	{
+		codeLink: 'https://github.com/morawskiOZ/KRD_task',
+		description: 'Interface to search for debtors data from remote API',
+		id: 'krd',
+		photoURL: 'https://pmorawski.s3.eu-west-2.amazonaws.com/image_KRD.png',
+		title: 'Debtor search UI',
 	},
 	{
 		codeLink: 'https://github.com/morawskiOZ/Get_Prime_Numbers',
