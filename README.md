@@ -31,6 +31,8 @@ Hosted through Cloudflare on GoDaddy. Amazon S3 CDN for images.
 - user experience with image overlay, once click should go to live examples (consider just on desktop)
 - bigger buttons on project overlay - lighthouse score shows some improvements needed
 - Styling migration to JSS
+- Styling needs refactoring, lots of bad quality, repetitive code,
+- Move content to Headless CMS like Contentful
 
 ### Bugs
 
