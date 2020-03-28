@@ -26,6 +26,7 @@ Hosted through Cloudflare on GoDaddy. Amazon S3 CDN for images.
 
 #### Backlog
 
+- Add more tests
 - CDN Images -  performance
 - SEO 100  - lighthouse score shows some improvements needed
 - user experience with image overlay, once click should go to live examples (consider just on desktop)
