@@ -1,0 +1,2 @@
+		"serve:function-send-email": "netlify-lambda serve functions/send-email",
+		"build:function-send-email": "netlify-lambda build functions/send-email"
