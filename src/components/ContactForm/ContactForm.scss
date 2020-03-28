@@ -40,7 +40,7 @@
   }
   &-button {
     padding: 8px;
-    width: 90px;
+    width: 120px;
     border-radius: 5px;
     margin-bottom: 5px;
     align-self: center;
@@ -59,6 +59,8 @@
   &-message {
     margin: 0 auto;
     font-weight: 600;
+    max-width: 40vw;
+    font-size: 12px;
   }
 }
 
@@ -85,6 +87,9 @@
       height: 25px;
       padding-left: 10px;
     }
+    &-message {
+      font-size: 16px;
+    }
   }
 }
 @media (min-width: 1024px) {
@@ -99,6 +104,9 @@
     }
     &-textArea {
       height: 120px;
+    }
+    &-message {
+      font-size: 20px;
     }
   }
 }

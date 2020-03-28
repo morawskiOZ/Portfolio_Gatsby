@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { Helmet } from 'react-helmet'
 import AutoCarousel from 'src/components/AutoCarousel/AutoCarousel'
 import Footer from 'src/components/Footer/Footer'
-import { InfoCard } from 'src/components/InfoCard/InfoCard'
+import { RE_CAPTCHA_CLIENT } from 'src/config'
 import DownArrows from 'src/components/MainParallax/DownArrows/DownArrows'
 import ParallaxTitle from 'src/components/MainParallax/ParallaxTitle/ParallaxTitle'
 import ProjectCardContainer from 'src/components/ProjectCardContainer/ProjectCardContainer'
@@ -17,6 +17,7 @@ import ProjectsSection from '../Sections/ProjectsSection/ProjectsSection'
 import './App.scss'
 import { backEndIcons, developmentIcons, frontEndIcons, links } from './data'
 import './reset.scss'
+import { InfoCard } from '../InfoCard/InfoCard'
 
 const App = (): ReactElement => {
 	return (
@@ -69,6 +70,11 @@ const App = (): ReactElement => {
 				<meta
 					name='twitter:image'
 					content='https://pmorawski.s3.eu-west-2.amazonaws.com/avatar_Limango.jpg'
+				/>
+				<script
+					src={`https://www.google.com/recaptcha/api.js?render=${RE_CAPTCHA_CLIENT}`}
+					async
+					defer
 				/>
 			</Helmet>
 			<Menu />

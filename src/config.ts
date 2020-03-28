@@ -1,0 +1,1 @@
+export const RE_CAPTCHA_CLIENT = '6Ld0BuQUAAAAAGtZGAm_GgNaMi8YaoTQpgQZy-PL'

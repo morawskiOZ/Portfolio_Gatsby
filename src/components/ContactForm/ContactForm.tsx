@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { FormEvent, useState, ReactElement } from 'react'
 import './ContactForm.scss'
+import { RE_CAPTCHA_CLIENT } from 'src/config'
 
 const ContactForm = (): ReactElement => {
 	const [name, setName] = useState<string>('')
@@ -8,22 +9,46 @@ const ContactForm = (): ReactElement => {
 	const [email, setEmail] = useState<string>('')
 	const [sent, setSent] = useState<boolean>(false)
 	const [buttonText, setButtonText] = useState<string>('Send')
+	const [error, setError] = useState(null)
 
-	const handleSubmit = async (
-		event: FormEvent<HTMLFormElement>
+	const handleSend = async (
+		event: FormEvent<HTMLFormElement>,
+		ReCaptchaToken: string
 	): Promise<void> => {
-		event.preventDefault()
-
 		setButtonText('...sending')
 
 		const data = {
 			name,
 			email,
 			message,
+			token: ReCaptchaToken,
 		}
-		await axios.post('api/v1', data)
-		setSent(true)
+		try {
+			await axios.post('/send', data, {
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json',
+				},
+			})
+			setSent(true)
+			setButtonText('')
+		} catch (e) {
+			setError(e.message)
+		}
 	}
+
+	const handleSubmit = async (
+		event: FormEvent<HTMLFormElement>
+	): Promise<void> => {
+		event.preventDefault()
+		grecaptcha.ready(async () => {
+			const token = await grecaptcha.execute(RE_CAPTCHA_CLIENT, {
+				action: 'demo',
+			})
+			handleSend(event, token)
+		})
+	}
+
 	return (
 		<form className='ContactForm' onSubmit={handleSubmit}>
 			<label className='ContactForm-label' htmlFor='message'>
@@ -72,12 +97,18 @@ const ContactForm = (): ReactElement => {
 				/>
 			</label>
 
-			{sent ? (
+			{sent && !error && (
 				<p className='ContactForm-message'>Message has been sent! Thank you!</p>
-			) : (
+			)}
+			{!sent && buttonText && !error && (
 				<button type='submit' className='ContactForm-button'>
 					{buttonText}
 				</button>
+			)}
+			{error && (
+				<p className='ContactForm-message'>
+					Sorry,an error has occurred. Please refresh the page and try again.
+				</p>
 			)}
 		</form>
 	)

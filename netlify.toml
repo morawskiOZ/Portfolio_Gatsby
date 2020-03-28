@@ -1,0 +1,12 @@
+[build]
+  command = "yarn run build"
+  publish = "public"
+  functions = "functions-build" # functions folder wiht production code
+[dev]
+  command = "npm run start" # Command to start your dev server
+  port = 8000 # Port that the dev server will be listening on
+  functionsPort = 34567 # port for functions server
+  targetPort = 8000 # Port of target app server
+  publish = "public"
+  functions = "functions" # functions folder with dev code
+

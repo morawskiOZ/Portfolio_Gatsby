@@ -1,14 +1,15 @@
 {
   "name": "send-email",
   "version": "1.0.0",
-  "description": "Email sender function",
+  "description": "",
   "main": "send-email.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "PM",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "sparkpost": "^2.1.4"
   }
 }
