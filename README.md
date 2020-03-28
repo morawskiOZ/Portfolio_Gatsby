@@ -4,7 +4,7 @@ Mainly developed to try out and learn new technologies. Big chunks of FE side ha
 
 ## Intro
 
-Gatsby generated website deployed on Netlify with CircleCI CI process.One push automatic deployments linked with Github repo. You can see it live [here](https://morawski.online)
+Gatsby generated website deployed on Netlify with CircleCI CI process.One push automatic deployments linked with Github repo. You can see it live [here](https://morawski.online).
 
 Mailing server has been done with Netlify (Lambda) function.
 
@@ -24,7 +24,7 @@ Hosted through Cloudflare on GoDaddy. Amazon S3 CDN for images.
 - Cloudflare
 - Amazon S3 bucket CDN
 
-### Backlog
+#### Backlog
 
 - CDN Images -  performance
 - SEO 100  - lighthouse score shows some improvements needed
@@ -36,6 +36,6 @@ Hosted through Cloudflare on GoDaddy. Amazon S3 CDN for images.
 - automate with bash script build/npm i for each function
 
 
-### Bugs
+#### Bugs
 
 - Sometimes there is flickering on mobile probably caused by scrolling libraries
