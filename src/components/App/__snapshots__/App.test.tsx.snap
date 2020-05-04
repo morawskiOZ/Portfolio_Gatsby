@@ -513,6 +513,58 @@ Array [
       </button>
       <button
         className="projectCard"
+        id="React Native NPM package"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        type="button"
+      >
+        <div
+          className="projectCard-picture"
+          style={
+            Object {
+              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/npm_rn.png)",
+            }
+          }
+        >
+          <div
+            className="projectCard-overlay "
+          >
+            <h3
+              className="projectCard-title"
+            >
+              React Native NPM package
+            </h3>
+            <p
+              className="projectCard-description"
+            >
+              Open source react native image slider component
+            </p>
+            <div
+              className="projectCard-links"
+            >
+              <a
+                className="projectCard-link"
+                href="https://www.npmjs.com/package/react-native-hook-image-slider"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <test-file-stub
+                  className="projectCard-svg"
+                />
+                <p
+                  className="projectCard-linkDescription"
+                >
+                  See the code
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </button>
+      <button
+        className="projectCard"
         id="Event Form"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -818,73 +870,6 @@ Array [
       </button>
       <button
         className="projectCard"
-        id="Website - Fruits"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        type="button"
-      >
-        <div
-          className="projectCard-picture"
-          style={
-            Object {
-              "backgroundImage": "url(test-file-stub)",
-            }
-          }
-        >
-          <div
-            className="projectCard-overlay "
-          >
-            <h3
-              className="projectCard-title"
-            >
-              Website - Fruits
-            </h3>
-            <p
-              className="projectCard-description"
-            >
-              Website created from pdf as a recruitment task
-            </p>
-            <div
-              className="projectCard-links"
-            >
-              <a
-                className="projectCard-link"
-                href="https://morawskioz.github.io/Fruits_Web/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <test-file-stub
-                  className="projectCard-svg"
-                />
-                <p
-                  className="projectCard-linkDescription"
-                >
-                  Live link
-                </p>
-              </a>
-              <a
-                className="projectCard-link"
-                href="https://github.com/morawskiOZ/Fruits_Web"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <test-file-stub
-                  className="projectCard-svg"
-                />
-                <p
-                  className="projectCard-linkDescription"
-                >
-                  See the code
-                </p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </button>
-      <button
-        className="projectCard"
         id="Batman Game"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -992,7 +977,7 @@ Array [
           className="infoCard-photo"
           style={
             Object {
-              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/avatar_Limango.jpg)",
+              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/square_avatar.jpg)",
             }
           }
         />
