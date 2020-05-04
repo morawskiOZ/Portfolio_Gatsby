@@ -47,7 +47,7 @@ const App = (): ReactElement => {
 						fullName='Piotr Morawski'
 						title='Front-End Developer'
 						links={links}
-						photoUrl='https://pmorawski.s3.eu-west-2.amazonaws.com/avatar_Limango.jpg'
+						photoUrl='https://pmorawski.s3.eu-west-2.amazonaws.com/square_avatar.jpg'
 					/>
 				</InfoCardSection>
 			</div>

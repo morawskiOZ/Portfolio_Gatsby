@@ -1,7 +1,6 @@
 import { ProjectCardProps } from 'src/components/ProjectCardContainer/ProjectCard/ProjectCard'
 import batman from 'src/photo/batman.png'
 import express from 'src/photo/express.png'
-import fruits from 'src/photo/fruits.png'
 import portfolio from 'src/photo/portfolio.jpg'
 import prime from 'src/photo/prime.png'
 import './ProjectCardContainer.scss'
@@ -14,6 +13,13 @@ export const projects: ProjectCardProps[] = [
 		liveLink: '#',
 		photoURL: portfolio,
 		title: 'Portfolio',
+	},
+	{
+		codeLink: 'https://www.npmjs.com/package/react-native-hook-image-slider',
+		description: 'Open source react native image slider component',
+		id: 'slider',
+		photoURL: 'https://pmorawski.s3.eu-west-2.amazonaws.com/npm_rn.png',
+		title: 'React Native NPM package',
 	},
 	{
 		codeLink: 'https://github.com/morawskiOZ/Monterail_Task',
@@ -56,14 +62,6 @@ export const projects: ProjectCardProps[] = [
 		photoURL:
 			'https://pmorawski.s3.eu-west-2.amazonaws.com/gameOfLife_small.jpg',
 		title: 'Game of Life',
-	},
-	{
-		codeLink: 'https://github.com/morawskiOZ/Fruits_Web',
-		description: 'Website created from pdf as a recruitment task',
-		id: 'fruits',
-		liveLink: 'https://morawskioz.github.io/Fruits_Web/',
-		photoURL: fruits,
-		title: 'Website - Fruits',
 	},
 	{
 		codeLink: 'https://github.com/morawskiOZ/Furry_Game',

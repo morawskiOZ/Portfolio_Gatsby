@@ -26,6 +26,7 @@ Hosted through Cloudflare on GoDaddy. Amazon S3 CDN for images.
 
 #### Backlog
 
+- Make you own implementation of react scroll with hooks and TS and publish npm package
 - Optimize fonts serving - use CDN
 - Add more tests
 - CDN Images -  performance
