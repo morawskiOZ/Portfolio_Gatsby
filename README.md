@@ -1,10 +1,10 @@
-# Piotr Morawski Portfolio
+# Piotr Morawski Portfolio https://www.piotr-morawski.com/
 
 Mainly developed to try out and learn new technologies. Big chunks of FE side has been reused from [old portfolio](https://github.com/morawskiOZ/Portfolio) (my early days of programming).
 
 ## Intro
 
-Gatsby generated website deployed on Netlify with CircleCI CI process.One push automatic deployments linked with Github repo. You can see it live [here](https://morawski.online).
+Gatsby generated website deployed on Netlify with CircleCI CI process.One push automatic deployments linked with Github repo. You can see it live [here](https://www.piotr-morawski.com/).
 
 Mailing server has been done with Netlify (Lambda) function.
 
