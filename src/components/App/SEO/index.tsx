@@ -19,7 +19,7 @@ export const SEO = (): ReactElement => {
 				name='robots'
 				content='max-snippet:-1, max-image-preview:large, max-video-preview:-1'
 			/>
-			<link rel='canonical' href='https://morawski.online' />
+			<link rel='canonical' href='https://piotr-morawski.com' />
 			<meta property='og:locale' content='en_US' />
 			<meta property='og:type' content='website' />
 			<meta property='og:title' content='Piotr Morawski | Frontend developer' />
@@ -27,7 +27,7 @@ export const SEO = (): ReactElement => {
 				property='og:description'
 				content='Favorite stack for now? React, TS, Node, Netlify, CircleCI, Jest. Also React Native maniac and trying to absorb Golang'
 			/>
-			<meta property='og:url' content='https://morawski.online' />
+			<meta property='og:url' content='https://piotr-morawski.com' />
 			<meta property='og:site_name' content='Portfolio' />
 			<meta
 				property='og:image'
