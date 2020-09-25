@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 const path = require('path')
+require('dotenv').config()
 
 module.exports = {
 	plugins: [
@@ -11,6 +12,16 @@ module.exports = {
 		'gatsby-plugin-sass',
 		'gatsby-plugin-postcss',
 		'gatsby-plugin-react-helmet',
+		{
+			resolve: `gatsby-source-cloudinary`,
+			options: {
+				cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+				apiKey: process.env.CLOUDINARY_API_KEY,
+				apiSecret: process.env.CLOUDINARY_API_SECRET,
+				resourceType: `image`,
+				prefix: `portfolio/`,
+			},
+		},
 		{
 			resolve: 'gatsby-plugin-root-import',
 			options: {

@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import React, { ReactElement } from 'react'
 import AutoCarousel from 'src/components/AutoCarousel/AutoCarousel'
 import Footer from 'src/components/Footer/Footer'
@@ -6,6 +7,7 @@ import ParallaxTitle from 'src/components/MainParallax/ParallaxTitle/ParallaxTit
 import ProjectCardContainer from 'src/components/ProjectCardContainer/ProjectCardContainer'
 import InfoCardSection from 'src/components/Sections/InfoCardSection/InfoCardSection'
 import IntroSection from 'src/components/Sections/IntroSection/IntroSection'
+import { InfoCard } from '../InfoCard/InfoCard'
 import IntroText from '../IntroText/IntroText'
 import MainParallax from '../MainParallax/MainParallax'
 import Menu from '../Menu/Menu'
@@ -13,17 +15,27 @@ import ProjectsSection from '../Sections/ProjectsSection/ProjectsSection'
 import './App.scss'
 import { backEndIcons, developmentIcons, frontEndIcons, links } from './data'
 import './reset.scss'
-import { InfoCard } from '../InfoCard/InfoCard'
 import { SCRIPTS } from './Scripts'
 import { SEO } from './SEO'
 
 const App = (): ReactElement => {
+	const data = useStaticQuery(graphql`
+		query CloudinaryImage {
+			cloudinaryMedia(public_id: { eq: "portfolio/parallax3" }) {
+				secure_url
+				public_id
+			}
+		}
+	`)
+
+	const parallaxImage = data?.cloudinaryMedia?.secure_url
+	console.log('data', data)
 	return (
 		<>
 			<SEO />
 			<SCRIPTS />
 			<Menu />
-			<MainParallax parallaxImage='https://res.cloudinary.com/milus/image/upload/v1601044811/portfolio/parallax3.jpg'>
+			<MainParallax parallaxImage={parallaxImage}>
 				<>
 					<ParallaxTitle />
 					<DownArrows href='#Intro' />
