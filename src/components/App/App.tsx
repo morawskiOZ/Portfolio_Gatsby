@@ -23,7 +23,7 @@ const App = (): ReactElement => {
 			<SEO />
 			<SCRIPTS />
 			<Menu />
-			<MainParallax parallaxImage='https://pmorawski.s3.eu-west-2.amazonaws.com/parallax3.jpg'>
+			<MainParallax parallaxImage='https://res.cloudinary.com/milus/image/upload/v1601044811/portfolio/parallax3.jpg'>
 				<>
 					<ParallaxTitle />
 					<DownArrows href='#Intro' />
@@ -47,7 +47,7 @@ const App = (): ReactElement => {
 						fullName='Piotr Morawski'
 						title='Front-End Developer'
 						links={links}
-						photoUrl='https://pmorawski.s3.eu-west-2.amazonaws.com/square_avatar.jpg'
+						photoUrl='https://res.cloudinary.com/milus/image/upload/v1601046853/portfolio/square_avatar.jpg'
 					/>
 				</InfoCardSection>
 			</div>

@@ -7,7 +7,6 @@ import { InfoLinkProps } from '../App/types'
 interface InfoCardProps {
 	fullName: string
 	title: string
-	email?: string
 	photoUrl?: string
 	links?: InfoLinkProps[]
 }

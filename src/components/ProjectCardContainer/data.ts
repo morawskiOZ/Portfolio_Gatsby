@@ -1,8 +1,4 @@
 import { ProjectCardProps } from 'src/components/ProjectCardContainer/ProjectCard/ProjectCard'
-import batman from 'src/photo/batman.png'
-import express from 'src/photo/express.png'
-import portfolio from 'src/photo/portfolio.jpg'
-import prime from 'src/photo/prime.png'
 import './ProjectCardContainer.scss'
 
 export const projects: ProjectCardProps[] = [
@@ -11,14 +7,16 @@ export const projects: ProjectCardProps[] = [
 		description: 'Gatsby project with CI and one push deployment on Netlify.',
 		id: 'portfolio',
 		liveLink: '#',
-		photoURL: portfolio,
+		photoURL:
+			'https://res.cloudinary.com/milus/image/upload/v1601044544/portfolio/portfolio.jpg',
 		title: 'Portfolio',
 	},
 	{
 		codeLink: 'https://www.npmjs.com/package/react-native-hook-image-slider',
 		description: 'Open source react native image slider component',
 		id: 'slider',
-		photoURL: 'https://pmorawski.s3.eu-west-2.amazonaws.com/npm_rn.png',
+		photoURL:
+			'https://res.cloudinary.com/milus/image/upload/v1601046955/portfolio/npm_rn.png',
 		title: 'React Native NPM package',
 	},
 	{
@@ -27,14 +25,15 @@ export const projects: ProjectCardProps[] = [
 		id: 'monterail',
 		liveLink: 'https://https://monterail-morawski.herokuapp.com',
 		photoURL:
-			'https://pmorawski.s3.eu-west-2.amazonaws.com/monterail_on_laptop.png',
+			'https://res.cloudinary.com/milus/image/upload/v1601045953/portfolio/monterail_on_laptop.png',
 		title: 'Event Form',
 	},
 	{
 		codeLink: 'https://github.com/morawskiOZ/KRD_task',
 		description: 'Interface to search for debtors data from remote API',
 		id: 'krd',
-		photoURL: 'https://pmorawski.s3.eu-west-2.amazonaws.com/image_KRD.png',
+		photoURL:
+			'https://res.cloudinary.com/milus/image/upload/v1601045924/portfolio/image_KRD.png',
 		title: 'Debtor search UI',
 	},
 	{
@@ -42,7 +41,8 @@ export const projects: ProjectCardProps[] = [
 		description: 'APP that shows prime numbers between given inputs.',
 		id: 'Prime',
 		liveLink: 'https://where-are-my-primes.herokuapp.com/',
-		photoURL: prime,
+		photoURL:
+			'https://res.cloudinary.com/milus/image/upload/v1601044543/portfolio/prime.png',
 		title: 'Prime Numbers',
 	},
 	{
@@ -50,7 +50,8 @@ export const projects: ProjectCardProps[] = [
 		description:
 			'Express server boilerplate with mailing. Easy to scale up with more routes and controllers. TypeScript ready.',
 		id: 'express',
-		photoURL: express,
+		photoURL:
+			'https://res.cloudinary.com/milus/image/upload/v1601044543/portfolio/express.png',
 		title: 'Mailing server',
 	},
 	{
@@ -60,7 +61,7 @@ export const projects: ProjectCardProps[] = [
 		id: 'gameOfLife',
 		liveLink: 'https://morawskioz.github.io/Game_Of_Life/',
 		photoURL:
-			'https://pmorawski.s3.eu-west-2.amazonaws.com/gameOfLife_small.jpg',
+			'https://res.cloudinary.com/milus/image/upload/v1601045903/portfolio/gameOfLife_small.jpg',
 		title: 'Game of Life',
 	},
 	{
@@ -68,7 +69,8 @@ export const projects: ProjectCardProps[] = [
 		description: 'My first game in JS. Move batman to collect Kryptonite :)',
 		id: 'batman',
 		liveLink: 'https://morawskioz.github.io/Furry_Game/',
-		photoURL: batman,
+		photoURL:
+			'https://res.cloudinary.com/milus/image/upload/v1601044543/portfolio/batman.png',
 		title: 'Batman Game',
 	},
 ]
