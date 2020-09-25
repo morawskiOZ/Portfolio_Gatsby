@@ -13,6 +13,14 @@ module.exports = {
 		'gatsby-plugin-postcss',
 		'gatsby-plugin-react-helmet',
 		{
+			resolve: 'gatsby-plugin-web-font-loader',
+			options: {
+				google: {
+					families: ['Montserrat:300,400,700,900'],
+				},
+			},
+		},
+		{
 			resolve: `gatsby-source-cloudinary`,
 			options: {
 				cloudName: process.env.CLOUDINARY_CLOUD_NAME,
