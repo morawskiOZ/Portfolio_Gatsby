@@ -3,7 +3,6 @@ import React, { ReactElement, useEffect, useState } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import './AutoCarousel.scss'
 import CarouselsItem from './CarouselsItem/CarouselsItem'
-import './foundation-icon/foundation-icons.scss'
 
 // TODO add stop and go func on click, show diffrent coursor
 // add pagination, kropki ktore pokazuja aktywny projekt i maja tez setery ustawiajace a

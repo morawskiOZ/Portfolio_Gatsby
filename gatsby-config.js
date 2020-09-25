@@ -13,11 +13,10 @@ module.exports = {
 		'gatsby-plugin-postcss',
 		'gatsby-plugin-react-helmet',
 		{
-			resolve: 'gatsby-plugin-web-font-loader',
+			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				google: {
-					families: ['Montserrat:300,400,700,900'],
-				},
+				fonts: ['Montserrat:,400,700,900'],
+				display: 'swap',
 			},
 		},
 		{
@@ -29,6 +28,9 @@ module.exports = {
 				resourceType: `image`,
 				prefix: `portfolio/`,
 			},
+		},
+		{
+			resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
 		},
 		{
 			resolve: 'gatsby-plugin-root-import',

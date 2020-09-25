@@ -1,6 +1,9 @@
 var plugins = [{
       plugin: require('/home/piotrm/repos/GitHub/Portfolio_Gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('/home/piotrm/repos/GitHub/Portfolio_Gatsby/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
+      options: {"plugins":[],"fonts":["Montserrat:,400,700,900"],"display":"swap"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
