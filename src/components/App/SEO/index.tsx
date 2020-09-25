@@ -31,11 +31,11 @@ export const SEO = (): ReactElement => {
 			<meta property='og:site_name' content='Portfolio' />
 			<meta
 				property='og:image'
-				content='https://res.cloudinary.com/milus/image/upload/v1601046853/portfolio/square_avatar.jpg'
+				content='https://res.cloudinary.com/milus/image/upload/f_auto,q_auto:low/portfolio/square_avatar.jpg'
 			/>
 			<meta
 				property='og:image:secure_url'
-				content='https://res.cloudinary.com/milus/image/upload/v1601046853/portfolio/square_avatar.jpg'
+				content='https://res.cloudinary.com/milus/image/upload/f_auto,q_auto:low/portfolio/square_avatar.jpg'
 			/>
 			<meta property='og:image:width' content='1280' />
 			<meta property='og:image:height' content='630' />
@@ -47,7 +47,7 @@ export const SEO = (): ReactElement => {
 			<meta name='twitter:title' content='Piotr Morawski FE Dev' />
 			<meta
 				name='twitter:image'
-				content='https://res.cloudinary.com/milus/image/upload/v1601046853/portfolio/square_avatar.jpg'
+				content='https://res.cloudinary.com/milus/image/upload/f_auto,q_auto:low/portfolio/square_avatar.jpg'
 			/>
 		</Helmet>
 	)

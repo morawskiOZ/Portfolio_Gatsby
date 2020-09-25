@@ -22,14 +22,13 @@ Hosted through Cloudflare on GoDaddy. Amazon S3 CDN for images.
 - CircleCi
 - Jest
 - Cloudflare
-- Amazon S3 bucket CDN
+- Clodinary image CDN and transformation
 
 #### Backlog
 
 - Make you own implementation of react scroll with hooks and TS and publish npm package
 - Optimize fonts serving - use CDN
 - Add more tests
-- CDN Images -  performance
 - SEO 100  - lighthouse score shows some improvements needed
 - user experience with image overlay, once click should go to live examples (consider just on desktop)
 - bigger buttons on project overlay - lighthouse score shows some improvements needed

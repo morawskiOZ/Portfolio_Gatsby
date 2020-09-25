@@ -8,7 +8,7 @@ export const projects: ProjectCardProps[] = [
 		id: 'portfolio',
 		liveLink: '#',
 		photoURL:
-			'https://res.cloudinary.com/milus/image/upload/v1601044544/portfolio/portfolio.jpg',
+			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/portfolio.jpg',
 		title: 'Portfolio',
 	},
 	{
@@ -16,7 +16,7 @@ export const projects: ProjectCardProps[] = [
 		description: 'Open source react native image slider component',
 		id: 'slider',
 		photoURL:
-			'https://res.cloudinary.com/milus/image/upload/v1601046955/portfolio/npm_rn.png',
+			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/npm_rn.png',
 		title: 'React Native NPM package',
 	},
 	{
@@ -25,7 +25,7 @@ export const projects: ProjectCardProps[] = [
 		id: 'monterail',
 		liveLink: 'https://https://monterail-morawski.herokuapp.com',
 		photoURL:
-			'https://res.cloudinary.com/milus/image/upload/v1601045953/portfolio/monterail_on_laptop.png',
+			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/monterail_on_laptop.png',
 		title: 'Event Form',
 	},
 	{
@@ -33,7 +33,7 @@ export const projects: ProjectCardProps[] = [
 		description: 'Interface to search for debtors data from remote API',
 		id: 'krd',
 		photoURL:
-			'https://res.cloudinary.com/milus/image/upload/v1601045924/portfolio/image_KRD.png',
+			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/v1601044544/portfolio/portfolio.jpg',
 		title: 'Debtor search UI',
 	},
 	{
@@ -42,7 +42,7 @@ export const projects: ProjectCardProps[] = [
 		id: 'Prime',
 		liveLink: 'https://where-are-my-primes.herokuapp.com/',
 		photoURL:
-			'https://res.cloudinary.com/milus/image/upload/v1601044543/portfolio/prime.png',
+			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/prime.png',
 		title: 'Prime Numbers',
 	},
 	{
@@ -51,7 +51,7 @@ export const projects: ProjectCardProps[] = [
 			'Express server boilerplate with mailing. Easy to scale up with more routes and controllers. TypeScript ready.',
 		id: 'express',
 		photoURL:
-			'https://res.cloudinary.com/milus/image/upload/v1601044543/portfolio/express.png',
+			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/express.png',
 		title: 'Mailing server',
 	},
 	{
@@ -61,7 +61,7 @@ export const projects: ProjectCardProps[] = [
 		id: 'gameOfLife',
 		liveLink: 'https://morawskioz.github.io/Game_Of_Life/',
 		photoURL:
-			'https://res.cloudinary.com/milus/image/upload/v1601045903/portfolio/gameOfLife_small.jpg',
+			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/gameOfLife_small.jpg',
 		title: 'Game of Life',
 	},
 	{
@@ -70,7 +70,7 @@ export const projects: ProjectCardProps[] = [
 		id: 'batman',
 		liveLink: 'https://morawskioz.github.io/Furry_Game/',
 		photoURL:
-			'https://res.cloudinary.com/milus/image/upload/v1601044543/portfolio/batman.png',
+			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/batman.png',
 		title: 'Batman Game',
 	},
 ]

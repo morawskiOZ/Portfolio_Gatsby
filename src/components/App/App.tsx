@@ -28,14 +28,15 @@ const App = (): ReactElement => {
 		}
 	`)
 
+	const imageUrl =
+		'https://res.cloudinary.com/milus/image/upload/f_auto,q_auto:low/v1601044811/portfolio/parallax3_small.jpg'
 	const parallaxImage = data?.cloudinaryMedia?.secure_url
-	console.log('data', data)
 	return (
 		<>
 			<SEO />
 			<SCRIPTS />
 			<Menu />
-			<MainParallax parallaxImage={parallaxImage}>
+			<MainParallax parallaxImage={parallaxImage || imageUrl}>
 				<>
 					<ParallaxTitle />
 					<DownArrows href='#Intro' />
@@ -59,7 +60,7 @@ const App = (): ReactElement => {
 						fullName='Piotr Morawski'
 						title='Front-End Developer'
 						links={links}
-						photoUrl='https://res.cloudinary.com/milus/image/upload/v1601046853/portfolio/square_avatar.jpg'
+						photoUrl='https://res.cloudinary.com/milus/image/upload/q_auto:low/portfolio/square_avatar.jpg'
 					/>
 				</InfoCardSection>
 			</div>
