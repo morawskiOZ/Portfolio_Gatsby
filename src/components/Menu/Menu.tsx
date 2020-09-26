@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect, useState, useRef } from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './Menu.scss'
 import { useScrollPosition } from 'src/hooks/useScrollPosition'
+import { MenuButton } from './MenuButton/MenuButton'
 
 const isBrowser = typeof window !== `undefined`
 
@@ -94,23 +94,18 @@ const Menu = (): ReactElement => {
 									<div className='menu-item--divider' key={`divider${index}`} />
 								)
 							}
-							return (
-								<button
-									className={`menu-item ${activeButton === index &&
-										'menu-item--active'}`}
-									onClick={(): void => setActiveButton(index)}
-									key={element}
-									type='button'
-								>
-									<AnchorLink
-										href={`#${element}`}
-										offset='100'
-										className='menu-link'
-									>
-										{element}
-									</AnchorLink>
-								</button>
-							)
+							if (typeof element === 'string') {
+								return (
+									<MenuButton
+										activeButton={activeButton}
+										activeButtonCb={(): void => setActiveButton(index)}
+										index={index}
+										title={element}
+										key={element}
+									/>
+								)
+							}
+							return null
 						})}
 					</nav>
 				)}

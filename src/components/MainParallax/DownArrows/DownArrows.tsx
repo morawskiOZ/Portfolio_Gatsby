@@ -1,15 +1,21 @@
+// @reach/router package—which Gatsby already depends upon
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { navigate } from '@reach/router'
 import React, { ReactElement } from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './DownArrows.scss'
 
 const DownArrows = ({ href }): ReactElement => {
+	const scrollToElement = (): Promise<void> => navigate(href)
+
 	return (
-		<AnchorLink href={href} offset='100'>
-			<div className='downArrow arrows downArrow--flex'>
-				<i className='downArrow--animated' />
-				<i className='downArrow--animated downArrow--bottom' />
-			</div>
-		</AnchorLink>
+		<button
+			className='downArrow arrows downArrow--flex'
+			onClick={scrollToElement}
+			type='button'
+		>
+			<i className='downArrow--animated' />
+			<i className='downArrow--animated downArrow--bottom' />
+		</button>
 	)
 }
 
