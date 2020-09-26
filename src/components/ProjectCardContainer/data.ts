@@ -23,7 +23,7 @@ export const projects: ProjectCardProps[] = [
 		codeLink: 'https://github.com/morawskiOZ/Monterail_Task',
 		description: 'Multi input and dynamic form with validation',
 		id: 'monterail',
-		liveLink: 'https://https://monterail-morawski.herokuapp.com',
+		liveLink: 'https://monterail-morawski.herokuapp.com',
 		photoURL:
 			'https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/monterail_on_laptop.png',
 		title: 'Event Form',
