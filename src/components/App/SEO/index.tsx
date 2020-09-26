@@ -3,7 +3,11 @@ import { Helmet } from 'react-helmet'
 
 export const SEO = (): ReactElement => {
 	return (
-		<Helmet>
+		<Helmet
+			htmlAttributes={{
+				lang: 'en',
+			}}
+		>
 			<title> Piotr Morawski | Frontend developer portfolio</title>
 			<meta
 				name='description'
