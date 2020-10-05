@@ -8,6 +8,7 @@ require('dotenv').config()
 
 module.exports = {
 	plugins: [
+		`gatsby-plugin-preact`,
 		'gatsby-plugin-typescript',
 		'gatsby-plugin-sass',
 		'gatsby-plugin-postcss',
