@@ -21,22 +21,22 @@ import { SEO } from './SEO'
 const App = (): ReactElement => {
 	const data = useStaticQuery(graphql`
 		query CloudinaryImage {
-			cloudinaryMedia(public_id: { eq: "portfolio/parallax3" }) {
-				secure_url
-				public_id
+			file(name: { eq: "parallax3_small" }) {
+				childImageSharp {
+					fluid(quality: 100) {
+						...GatsbyImageSharpFluid_withWebp
+					}
+				}
 			}
 		}
 	`)
-
-	const imageUrl =
-		'https://res.cloudinary.com/milus/image/upload/f_auto,q_auto:low/v1601044811/portfolio/parallax3_small.jpg'
-	const parallaxImage = data?.cloudinaryMedia?.secure_url
+	const parallaxImage = data?.file?.childImageSharp?.fluid
 	return (
 		<>
 			<SEO />
 			<SCRIPTS />
 			<Menu />
-			<MainParallax parallaxImage={parallaxImage || imageUrl}>
+			<MainParallax parallaxImage={parallaxImage || null}>
 				<>
 					<ParallaxTitle />
 					<DownArrows href='#Intro' />
@@ -56,7 +56,6 @@ const App = (): ReactElement => {
 				</ProjectsSection>
 				<InfoCardSection id='Contact'>
 					<InfoCard
-						email='piotrmorawski90@gmail.com'
 						fullName='Piotr Morawski'
 						title='Front-End Developer'
 						links={links}

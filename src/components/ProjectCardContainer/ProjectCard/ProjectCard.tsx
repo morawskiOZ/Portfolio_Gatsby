@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react'
-import GitHubSvg from 'src/icons/github.svg'
-import ReactSvg from 'src/icons/www.svg'
+import GitHubSvg from '../../../../static/assets/github.svg'
+import ReactSvg from '../../../../static/assets/www.svg'
 import './ProjectCard.scss'
 
 export interface ProjectCardProps {

@@ -1,23 +1,26 @@
 import React, { ReactElement } from 'react'
 import './MainParallax.scss'
+import BackgroundImage from 'gatsby-background-image'
 
 interface MainParallaxProps {
 	children: ReactElement
-	parallaxImage: string
+	parallaxImage: any
 }
 
 const MainParallax = ({
 	parallaxImage,
 	children,
 }: MainParallaxProps): ReactElement => {
-	const inlineStyles = {
-		backgroundImage: `url(${parallaxImage})`,
-	}
 	return (
 		<div className='mainParallax-container'>
-			<div className='mainParallax-image' style={inlineStyles}>
+			<BackgroundImage
+				Tag='section'
+				className='mainParallax-image'
+				fluid={parallaxImage}
+				backgroundColor='#040e18'
+			>
 				{children}
-			</div>
+			</BackgroundImage>
 		</div>
 	)
 }

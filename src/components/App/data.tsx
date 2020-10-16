@@ -1,5 +1,5 @@
 import React from 'react'
-import CircleCILogo from 'src/icons/CircleCILogo.svg'
+import CircleCILogo from '../../../static/assets/CircleCILogo.svg'
 import { mongoDbIcon, nodeJSIcon } from '../../icons/backEndIcons'
 import { gitIcon, ubuntuIcon } from '../../icons/developmentIcons'
 import {
@@ -11,9 +11,9 @@ import {
 	SassIcon,
 	TypeScriptIcon,
 } from '../../icons/frontEndIcons'
-import GitHubSvg from '../../icons/github.svg'
-import HomeSvg from '../../icons/home.svg'
-import LinkedInSvg from '../../icons/linkedIn.svg'
+import GitHubSvg from '../../../static/assets/github.svg'
+import HomeSvg from '../../../static/assets/home.svg'
+import LinkedInSvg from '../../../static/assets/linkedIn.svg'
 import { InfoLinkProps } from './types'
 
 export const links: InfoLinkProps[] = [
