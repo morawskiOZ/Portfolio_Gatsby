@@ -7,7 +7,7 @@ const ProjectCardContainer = (): ReactElement => {
 	return (
 		<div className='projectCard-container'>
 			{projects.map(
-				({ title, codeLink, description, id, liveLink, photoURL }) => {
+				({ title, codeLink, description, id, liveLink, imageName }) => {
 					return (
 						<ProjectCard
 							title={title}
@@ -15,7 +15,7 @@ const ProjectCardContainer = (): ReactElement => {
 							description={description}
 							key={id}
 							liveLink={liveLink}
-							photoURL={photoURL}
+							imageName={imageName}
 							id={id}
 						/>
 					)

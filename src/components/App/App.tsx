@@ -22,11 +22,7 @@ const App = (): ReactElement => {
 	const data = useStaticQuery(graphql`
 		query CloudinaryImage {
 			file(name: { eq: "parallax3_small" }) {
-				childImageSharp {
-					fluid(quality: 100) {
-						...GatsbyImageSharpFluid_withWebp
-					}
-				}
+				...FluidImage
 			}
 		}
 	`)

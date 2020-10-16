@@ -5,7 +5,7 @@ import './ProjectCard.scss'
 
 export interface ProjectCardProps {
 	title: string
-	photoURL: string
+	imageName: string
 	description: string
 	liveLink?: string
 	codeLink: string
@@ -17,12 +17,12 @@ const ProjectCard = ({
 	codeLink,
 	description,
 	liveLink,
-	photoURL,
+	imageName,
 }: ProjectCardProps): ReactElement => {
 	const [isHovered, setIsHovered] = useState<boolean>(false)
 	const [isClicked, setIsClicked] = useState<boolean>(false)
 
-	const inlineStyle = { backgroundImage: `url(${photoURL})` }
+	const inlineStyle = { backgroundImage: `url(${imageName})` }
 	return (
 		<button
 			id={title}
