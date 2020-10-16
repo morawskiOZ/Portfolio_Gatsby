@@ -7,6 +7,7 @@ import ParallaxTitle from 'src/components/MainParallax/ParallaxTitle/ParallaxTit
 import ProjectCardContainer from 'src/components/ProjectCardContainer/ProjectCardContainer'
 import InfoCardSection from 'src/components/Sections/InfoCardSection/InfoCardSection'
 import IntroSection from 'src/components/Sections/IntroSection/IntroSection'
+import { createImageHashMap } from 'src/helpers/images'
 import { InfoCard } from '../InfoCard/InfoCard'
 import IntroText from '../IntroText/IntroText'
 import MainParallax from '../MainParallax/MainParallax'
@@ -18,21 +19,26 @@ import './reset.scss'
 import { SCRIPTS } from './Scripts'
 import { SEO } from './SEO'
 
-const App = (): ReactElement => {
-	const data = useStaticQuery(graphql`
-		query CloudinaryImage {
-			file(name: { eq: "parallax3_small" }) {
-				...FluidImage
-			}
-		}
-	`)
-	const parallaxImage = data?.file?.childImageSharp?.fluid
+const App = ({ data }): ReactElement => {
+	// const data = useStaticQuery(graphql`
+	// 	query CloudinaryImage {
+	// 		file(name: { eq: "parallax3_small" }) {
+	// 			...FluidImage
+	// 		}
+	// 	}
+	// `)
+
+	const images = data?.allFile?.edges
+
+	const imageHashMap = createImageHashMap(images)
+	console.log(imageHashMap, 'imageHashMap')
+	const { parallax3_small, square_avatar, ...restImagesHashMap } = imageHashMap
 	return (
 		<>
 			<SEO />
 			<SCRIPTS />
 			<Menu />
-			<MainParallax parallaxImage={parallaxImage || null}>
+			<MainParallax parallaxImage={parallax3_small || null}>
 				<>
 					<ParallaxTitle />
 					<DownArrows href='#Intro' />
@@ -55,7 +61,7 @@ const App = (): ReactElement => {
 						fullName='Piotr Morawski'
 						title='Front-End Developer'
 						links={links}
-						photoUrl='https://res.cloudinary.com/milus/image/upload/q_auto:low/portfolio/square_avatar.jpg'
+						photo={square_avatar}
 					/>
 				</InfoCardSection>
 			</div>

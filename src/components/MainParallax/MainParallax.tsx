@@ -16,7 +16,7 @@ const MainParallax = ({
 			<BackgroundImage
 				Tag='section'
 				className='mainParallax-image'
-				fluid={parallaxImage}
+				fluid={parallaxImage?.fluid}
 				backgroundColor='#040e18'
 			>
 				{children}

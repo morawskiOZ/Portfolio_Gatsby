@@ -85,36 +85,7 @@ Array [
   </div>,
   <div
     className="mainParallax-container"
-  >
-    <div
-      className="mainParallax-image"
-      style={
-        Object {
-          "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/parallax3.jpg)",
-        }
-      }
-    >
-      <div
-        className="parallaxTitle"
-        id="parallaxTitle"
-      />
-      <a
-        href="#Intro"
-        onClick={[Function]}
-      >
-        <div
-          className="downArrow arrows downArrow--flex"
-        >
-          <i
-            className="downArrow--animated"
-          />
-          <i
-            className="downArrow--animated downArrow--bottom"
-          />
-        </div>
-      </a>
-    </div>
-  </div>,
+  />,
   <div
     className="appFrame-timeLineZone"
   >
@@ -457,7 +428,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(test-file-stub)",
+              "backgroundImage": "url(https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/portfolio.jpg)",
             }
           }
         >
@@ -524,7 +495,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/npm_rn.png)",
+              "backgroundImage": "url(https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/npm_rn.png)",
             }
           }
         >
@@ -576,7 +547,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/monterail_on_laptop.png)",
+              "backgroundImage": "url(https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/monterail_on_laptop.png)",
             }
           }
         >
@@ -598,7 +569,7 @@ Array [
             >
               <a
                 className="projectCard-link"
-                href="https://https://monterail-morawski.herokuapp.com"
+                href="https://monterail-morawski.herokuapp.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -643,7 +614,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/image_KRD.png)",
+              "backgroundImage": "url(https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/v1601044544/portfolio/portfolio.jpg)",
             }
           }
         >
@@ -695,7 +666,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(test-file-stub)",
+              "backgroundImage": "url(https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/prime.png)",
             }
           }
         >
@@ -762,7 +733,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(test-file-stub)",
+              "backgroundImage": "url(https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/express.png)",
             }
           }
         >
@@ -814,7 +785,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/gameOfLife_small.jpg)",
+              "backgroundImage": "url(https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/gameOfLife_small.jpg)",
             }
           }
         >
@@ -881,7 +852,7 @@ Array [
           className="projectCard-picture"
           style={
             Object {
-              "backgroundImage": "url(test-file-stub)",
+              "backgroundImage": "url(https://res.cloudinary.com/milus/image/upload/c_mfit,h_174,f_auto,q_auto:eco,w_270/portfolio/batman.png)",
             }
           }
         >
@@ -975,11 +946,6 @@ Array [
       >
         <div
           className="infoCard-photo"
-          style={
-            Object {
-              "backgroundImage": "url(https://pmorawski.s3.eu-west-2.amazonaws.com/square_avatar.jpg)",
-            }
-          }
         />
         <div
           className="infoCard-info"

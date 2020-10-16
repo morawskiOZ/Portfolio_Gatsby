@@ -1,29 +1,31 @@
 import ContactForm from 'src/components/ContactForm/ContactForm'
 import React, { ReactElement } from 'react'
 import './InfoCard.scss'
+import Img from 'gatsby-image'
 import { InfoCardLink } from './InfoCardLink/InfoCardLink'
 import { InfoLinkProps } from '../App/types'
 
 interface InfoCardProps {
 	fullName: string
 	title: string
-	photoUrl?: string
+	photo?: any
 	links?: InfoLinkProps[]
 }
 
 export const InfoCard = ({
 	fullName,
 	links,
-	photoUrl,
+	photo,
 	title,
 }: InfoCardProps): ReactElement => {
-	const inlineStyles = {
-		backgroundImage: `url(${photoUrl})`,
-	}
 	return (
 		<div className='infoCard'>
 			<div className='infoCard-infoContainer'>
-				<div className='infoCard-photo' style={inlineStyles} />
+				<div className='infoCard-photo'>
+					{photo && (
+						<Img fluid={photo.fluid} imgStyle={{ borderRadius: '10%' }} />
+					)}
+				</div>
 				<div className='infoCard-info'>
 					<h1 className='infoCard-name'>{fullName}</h1>
 					<h2 className='infoCard-title'>{title}</h2>
