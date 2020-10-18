@@ -1,28 +1,28 @@
 import React, { ReactElement, useState } from 'react'
+import Img from 'gatsby-image'
+import { ProjectCardProps } from 'src/components/ProjectCardContainer/types'
 import GitHubSvg from '../../../icons/github.svg'
 import ReactSvg from '../../../icons/www.svg'
 import './ProjectCard.scss'
 
-export interface ProjectCardProps {
-	title: string
-	imageName: string
-	description: string
-	liveLink?: string
-	codeLink: string
-	id: string
+type BaseProps = Omit<ProjectCardProps, 'imageName'>
+
+interface Props extends BaseProps {
+	image: any
 }
 
-const ProjectCard = ({
+export const ProjectCard = ({
 	title,
 	codeLink,
 	description,
 	liveLink,
-	imageName,
-}: ProjectCardProps): ReactElement => {
+	image,
+}: Props): ReactElement => {
 	const [isHovered, setIsHovered] = useState<boolean>(false)
 	const [isClicked, setIsClicked] = useState<boolean>(false)
 
-	const inlineStyle = { backgroundImage: `url(${imageName})` }
+	if (!image) return null
+
 	return (
 		<button
 			id={title}
@@ -42,7 +42,12 @@ const ProjectCard = ({
 			}}
 			type='button'
 		>
-			<div className='projectCard-picture' style={inlineStyle}>
+			<div className='projectCard-picture'>
+				<Img
+					fluid={image.fluid}
+					imgStyle={{ borderRadius: '7px' }}
+					style={{ height: '100%' }}
+				/>
 				<div
 					className={`projectCard-overlay ${
 						isHovered || isClicked ? 'projectCard-overlay--shown' : ''
@@ -77,5 +82,3 @@ const ProjectCard = ({
 		</button>
 	)
 }
-
-export default ProjectCard

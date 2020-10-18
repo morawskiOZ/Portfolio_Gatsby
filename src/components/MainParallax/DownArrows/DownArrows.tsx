@@ -10,11 +10,14 @@ const DownArrows = ({ href }): ReactElement => {
 	return (
 		<button
 			className='downArrow arrows downArrow--flex'
-			onClick={scrollToElement}
+			onClick={(): Promise<void> => navigate(href)}
+			onKeyDown={scrollToElement}
 			type='button'
 		>
-			<i className='downArrow--animated' />
-			<i className='downArrow--animated downArrow--bottom' />
+			<a href={href} className='downArrow__link' onClick={scrollToElement}>
+				<i className='downArrow--animated' />
+				<i className='downArrow--animated downArrow--bottom' />
+			</a>
 		</button>
 	)
 }

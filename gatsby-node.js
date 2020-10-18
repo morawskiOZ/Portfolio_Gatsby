@@ -47,7 +47,7 @@ exports.createPages = async function({ actions, graphql }) {
 			}
 		}
 	`)
-	console.log(data, 'data')
+
 	const imagesData = data.allFile.edges
 
 	const createImageHashMap = images => {

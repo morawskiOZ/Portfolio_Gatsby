@@ -48,7 +48,7 @@ const App = ({ images }: { images: any }): ReactElement => {
 					<IntroText />
 				</IntroSection>
 				<ProjectsSection id='Projects'>
-					<ProjectCardContainer />
+					<ProjectCardContainer images={restImages} />
 				</ProjectsSection>
 				<InfoCardSection id='Contact'>
 					<InfoCard

@@ -1,9 +1,13 @@
 import React, { ReactElement } from 'react'
-import ProjectCard from 'src/components/ProjectCardContainer/ProjectCard/ProjectCard'
 import './ProjectCardContainer.scss'
 import { projects } from './data'
+import { ProjectCard } from './ProjectCard/ProjectCard'
 
-const ProjectCardContainer = (): ReactElement => {
+interface Props {
+	images: any
+}
+
+const ProjectCardContainer = ({ images }: Props): ReactElement => {
 	return (
 		<div className='projectCard-container'>
 			{projects.map(
@@ -15,7 +19,7 @@ const ProjectCardContainer = (): ReactElement => {
 							description={description}
 							key={id}
 							liveLink={liveLink}
-							imageName={imageName}
+							image={images[imageName] || null}
 							id={id}
 						/>
 					)

@@ -1,67 +1,73 @@
 .downArrow {
-  position: absolute;
-  left: calc(50% + 5px);
-  bottom: 18vh;
+	&:hover {
+		cursor: pointer;
+	}
 
-  &:hover {
-    cursor: pointer;
-  }
+	&--flex {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	i {
+		border: solid white;
+		border-width: 0 5px 5px 0;
+		display: inline-block;
+		padding: 40px;
+		position: absolute;
+	}
 
-  &--flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  i {
-    border: solid white;
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 40px;
-    position: absolute;
-  }
+	&--animated {
+		animation: scaleUp 1.5s infinite cubic-bezier(0.4, 0, 1, 1);
+	}
+	&--bottom {
+		bottom: -72px;
+	}
 
-  &--animated {
-    animation: scaleUp 1.5s infinite cubic-bezier(0.4, 0, 1, 1);
-  }
-  &--bottom {
-    bottom: -72px;
-  }
+	&__link {
+		position: absolute;
+		bottom: 18vh;
+		left: calc(50% - 38px);
+	}
 
-  @media screen and (min-width: 700px) {
-    i {
-      border-width: 0 8px 8px 0;
-      padding: 45px;
-    }
-  }
-  @media (orientation: landscape) {
-    bottom: 22vh;
-    i {
-      border-width: 0 6px 6px 0;
-      padding: 25px;
-    }
-    i.downArrow--bottom {
-      opacity: 0;
-    }
-  }
-  @media (orientation: landscape) and (min-height: 768px) {
-    bottom: 18vh;
-    i {
-      border-width: 0 8px 8px 0;
-      padding: 45px;
-    }
-    i.downArrow--bottom {
-      opacity: 1;
-    }
-  }
+	@media screen and (min-width: 700px) {
+		i {
+			border-width: 0 8px 8px 0;
+			padding: 45px;
+		}
+
+		&__link {
+			left: calc(50% - 46px);
+		}
+	}
+	@media (orientation: landscape) {
+		bottom: 22vh;
+		i {
+			border-width: 0 6px 6px 0;
+			padding: 25px;
+		}
+		i.downArrow--bottom {
+			opacity: 0;
+		}
+	}
+	@media (orientation: landscape) and (min-height: 768px) {
+		bottom: 18vh;
+		i {
+			border-width: 0 8px 8px 0;
+			padding: 45px;
+		}
+		i.downArrow--bottom {
+			opacity: 1;
+		}
+	}
 }
 @keyframes scaleUp {
-  0% {
-    transform: scale(1) rotate(45deg) skew(-20deg, -20deg);
-  }
-  50% {
-    transform: scale(1.2) rotate(45deg) skew(-20deg, -20deg);
-  }
-  100% {
-    transform: scale(1) rotate(45deg) skew(-20deg, -20deg);
-  }
+	0% {
+		transform: scale(1) rotate(45deg) skew(-20deg, -20deg);
+	}
+	50% {
+		transform: scale(1.2) rotate(45deg) skew(-20deg, -20deg);
+	}
+	100% {
+		transform: scale(1) rotate(45deg) skew(-20deg, -20deg);
+	}
 }
