@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useCallback } from 'react'
 import AutoCarousel from 'src/components/AutoCarousel/AutoCarousel'
 import Footer from 'src/components/Footer/Footer'
 import DownArrows from 'src/components/MainParallax/DownArrows/DownArrows'
@@ -19,20 +19,16 @@ import './reset.scss'
 import { SCRIPTS } from './Scripts'
 import { SEO } from './SEO'
 
-const App = ({ data }): ReactElement => {
+const App = ({ images }: { images: any }): ReactElement => {
 	// const data = useStaticQuery(graphql`
 	// 	query CloudinaryImage {
-	// 		file(name: { eq: "parallax3_small" }) {
+	// 		file(name: { eq: "parallax3_small" }) {I
 	// 			...FluidImage
 	// 		}
 	// 	}
 	// `)
+	const { parallax3_small, square_avatar, ...restImages } = images
 
-	const images = data?.allFile?.edges
-
-	const imageHashMap = createImageHashMap(images)
-	console.log(imageHashMap, 'imageHashMap')
-	const { parallax3_small, square_avatar, ...restImagesHashMap } = imageHashMap
 	return (
 		<>
 			<SEO />

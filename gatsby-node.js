@@ -18,3 +18,54 @@ exports.onCreateNode = async ({
 		})
 	}
 }
+
+exports.createPages = async function({ actions, graphql }) {
+	const { data } = await graphql(`
+		query {
+			allFile(filter: { internal: { mediaType: { regex: "/image/" } } }) {
+				edges {
+					node {
+						childImageSharp {
+							fluid {
+								base64
+								tracedSVG
+								srcWebp
+								srcSetWebp
+								originalImg
+								originalName
+								aspectRatio
+								presentationHeight
+								presentationWidth
+								sizes
+								src
+								srcSet
+							}
+						}
+						name
+					}
+				}
+			}
+		}
+	`)
+	console.log(data, 'data')
+	const imagesData = data.allFile.edges
+
+	const createImageHashMap = images => {
+		if (!images) return {}
+		return {
+			...images.reduce((result, image) => {
+				const imageName = image && image.node && image.node.name
+				if (imageName) {
+					return { ...result, [imageName]: { ...image.node.childImageSharp } }
+				}
+				return result
+			}, {}),
+		}
+	}
+	const imageHashMap = createImageHashMap(imagesData)
+	actions.createPage({
+		path: '/',
+		component: require.resolve(`./src/templates/homePage.tsx`),
+		context: { images: imageHashMap },
+	})
+}
