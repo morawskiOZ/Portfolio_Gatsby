@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import './MainParallax.scss'
-import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
 
 interface MainParallaxProps {
 	children: ReactElement
@@ -13,14 +13,8 @@ const MainParallax = ({
 }: MainParallaxProps): ReactElement => {
 	return (
 		<div className='mainParallax-container'>
-			<BackgroundImage
-				Tag='section'
-				className='mainParallax-image'
-				fluid={parallaxImage?.fluid}
-				backgroundColor='#040e18'
-			>
-				{children}
-			</BackgroundImage>
+			<Img fluid={parallaxImage.fluid} style={{ height: '100%' }} />
+			{children}
 		</div>
 	)
 }

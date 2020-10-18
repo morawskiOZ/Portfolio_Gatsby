@@ -17,14 +17,14 @@
 		"clean:functions": "rm -rf functions-build && mkdir functions-build",
 		"postinstall": "netlify-lambda install functions",
 		"serve:function-send-email": "netlify-lambda serve functions/send-email",
-		"build:function-send-email": "netlify-lambda build functions/send-email"
+		"build:function-send-email": "netlify-lambda build functions/send-email",
+		"update-npm-libs": "npx npm-check -u"
 	},
 	"dependencies": {
 		"axios": "^0.19.2",
 		"dotenv": "^8.2.0",
 		"esm": "^3.2.25",
 		"gatsby": "^2.24.80",
-		"gatsby-background-image": "^1.1.2",
 		"gatsby-image": "^2.4.21",
 		"gatsby-plugin-google-fonts": "^1.0.1",
 		"gatsby-plugin-postcss": "^2.3.12",
