@@ -14,6 +14,7 @@ import ProjectsSection from '../Sections/ProjectsSection/ProjectsSection'
 import './App.scss'
 import { backEndIcons, developmentIcons, frontEndIcons, links } from './data'
 import './reset.scss'
+import '../../fonts/fonts.css'
 import { SCRIPTS } from './Scripts'
 import { SEO } from './SEO'
 

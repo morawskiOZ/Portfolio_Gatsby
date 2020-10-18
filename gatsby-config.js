@@ -15,12 +15,9 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-preload-fonts',
 		{
-			resolve: 'gatsby-plugin-web-font-loader',
+			resolve: `gatsby-plugin-preload-fonts`,
 			options: {
-				custom: {
-					families: ['Montserrat'],
-					urls: ['/fonts/fonts.css'],
-				},
+				crossOrigin: `anonymous`,
 			},
 		},
 		{
