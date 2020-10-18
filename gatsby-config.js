@@ -13,11 +13,14 @@ module.exports = {
 		'gatsby-plugin-sass',
 		'gatsby-plugin-postcss',
 		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-preload-fonts',
 		{
-			resolve: `gatsby-plugin-google-fonts`,
+			resolve: 'gatsby-plugin-web-font-loader',
 			options: {
-				fonts: ['Montserrat:,400,700,900'],
-				display: 'swap',
+				custom: {
+					families: ['Montserrat'],
+					urls: ['/fonts/fonts.css'],
+				},
 			},
 		},
 		{

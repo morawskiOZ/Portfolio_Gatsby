@@ -1,0 +1,39 @@
+/* montserrat-regular - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Montserrat Regular'), local('Montserrat-Regular'),
+		/* IE6-IE8 */ url('../fonts/montserrat-v15-latin-regular.woff2')
+			format('woff2'),
+		/* Super Modern Browsers */
+			url('../fonts/montserrat-v15-latin-regular.woff') format('woff'),
+		/* Modern Browsers */ url('../fonts/montserrat-v15-latin-regular.ttf')
+			format('truetype');
+}
+
+/* montserrat-700 - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	src: /* IE6-IE8 */ url('../fonts/montserrat-v15-latin-700.woff2')
+			format('woff2'),
+		/* Super Modern Browsers */ url('../fonts/montserrat-v15-latin-700.woff')
+			format('woff'),
+		/* Modern Browsers */ url('../fonts/montserrat-v15-latin-700.ttf')
+			format('truetype');
+}
+
+/* montserrat-900 - latin */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 900;
+	src: /* IE6-IE8 */ url('../fonts/montserrat-v15-latin-900.woff2')
+			format('woff2'),
+		/* Super Modern Browsers */ url('../fonts/montserrat-v15-latin-900.woff')
+			format('woff'),
+		/* Modern Browsers */ url('../fonts/montserrat-v15-latin-900.ttf')
+			format('truetype');
+}
