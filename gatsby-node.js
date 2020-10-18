@@ -19,7 +19,7 @@ exports.onCreateNode = async ({
 	}
 }
 
-exports.createPages = async function({ actions, graphql }) {
+exports.createPages = async function ({ actions, graphql }) {
 	const { data } = await graphql(`
 		query {
 			allFile(filter: { internal: { mediaType: { regex: "/image/" } } }) {
