@@ -26,7 +26,7 @@ exports.createPages = async function ({ actions, graphql }) {
 				edges {
 					node {
 						childImageSharp {
-							fluid(quality: 100) {
+							fluid {
 								base64
 								tracedSVG
 								srcWebp
