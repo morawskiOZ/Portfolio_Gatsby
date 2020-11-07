@@ -13,7 +13,13 @@ const MainParallax = ({
 }: MainParallaxProps): ReactElement => {
 	return (
 		<div className='mainParallax-container'>
-			<Img fluid={parallaxImage.fluid} style={{ height: '100%' }} />
+			<Img
+				fluid={parallaxImage.fluid}
+				style={{ height: '100%' }}
+				backgroundColor='transparent'
+				fadeIn={false}
+				loading='eager'
+			/>
 			{children}
 		</div>
 	)
