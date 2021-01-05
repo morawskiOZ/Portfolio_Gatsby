@@ -22,7 +22,7 @@
 		"preload-fonts": "gatsby-preload-fonts"
 	},
 	"dependencies": {
-		"axios": "^0.20.0",
+		"axios": "^0.21.1",
 		"dotenv": "^8.2.0",
 		"esm": "^3.2.25",
 		"gatsby": "^2.24.80",
